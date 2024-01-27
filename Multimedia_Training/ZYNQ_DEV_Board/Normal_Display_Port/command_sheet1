@@ -1,0 +1,28 @@
+1  modetest -D fd4a0000.display -s 45:640x480-60@BG24 
+    2  modetest -D fd4a0000.display 
+    3  modetest -D fd4a0000.display 
+    4  modetest -D fd4a0000.display 
+    5  modetest -D fd4a0000.display -w 41:alpha:0
+    6  modetest -D fd4a0000.display 
+    7  modetest -D fd4a0000.display 
+    8  modetest -D fd4a0000.display -w 41:alpha:0
+    9  modetest -D fd4a0000.display -w 41:alpha:255
+   10  modetest -D fd4a0000.display -w 41:alpha:255
+   11  modetest -D fd4a0000.display -w 41:alpha:255
+   12  modetest -D fd4a0000.display -w 41:alpha:255
+   13  modetest -D fd4a0000.display -w 41:alpha:255
+   14  modetest -D fd4a0000.display -w 41:alpha:255
+   15  modetest -D fd4a0000.display -w 41:alpha:255
+   16  modetest -D fd4a0000.display -w 41:alpha:255
+   17  modetest -D fd4a0000.display -w 41:alpha:255
+   18  modetest -D fd4a0000.display -w 41:alpha:150
+   19  gst-launch-1.0 videotestsrc animation-mode=2 pattern=snow ! video/x-raw,width=1920,height=1080,format=BGR ! kmssi
+   20  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=NV12 ! kmssink
+   21  modetest --help
+   22  modetest -D fd4a0000.display -s 45:3840x2160@BG24 -P 39@43:3840x2160@NV12
+   23  modetest -D fd4a0000.display -s 45:3840x2160@BG24 -P 39@43:3840x2160@NV12 -w 41:alpha:150
+   24  modetest -D fd4a0000.display -s 45:3840x2160@BG24 -P 39@43:3840x2160@NV12 -w 41:alpha:255
+   25  modetest -D fd4a0000.display -s 45:3840x2160@BG24 -P 39@43:3840x2160@NV12 -w 41:alpha:0
+   26  history 
+   11  sudo systemctl start xserver-nodm
+

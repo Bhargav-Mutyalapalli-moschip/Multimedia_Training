@@ -1,0 +1,5 @@
+#S.no,Testcase #,Test type,Source,Bitstream,Resolution&Fps,Codec,Target Bitrate,Max Bitrate,Control Rate,GOP Mode,GOP Length,B-Frames,Format,Latency Mode,Profile,QP Mode,Num Slices,Num buffers,Prefetch Buffer,Mode,Display
+run_list+="\
+115,L0_115,live_playback,HDMI,Gran_Turismo_4Kp60.mp4,4kp60,AVC,50000,NA,constant,basic,NA,0,nv12,normal,baseline,NA,NA,600,NA,loop-playback,HDMI
+116,L0_116,live_playback,HDMI,Gran_Turismo_4Kp60.mp4,4kp60,HEVC,60000,NA,constant,basic,NA,4,nv12,normal,main,NA,NA,600,NA,loop-play-eos,HDMI
+"

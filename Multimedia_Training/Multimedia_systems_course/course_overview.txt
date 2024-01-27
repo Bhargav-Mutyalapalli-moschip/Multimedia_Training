@@ -1,0 +1,25 @@
+Subject Contents 
+Lecture 1 -- Introduction & Image Processing
+Multimedia Applications; Introduction to Multimedia Research; Basic Concepts in Multimedia Signal Processing; Spatial Redundancy in Images; Lossless & Predictive Coding (entropy coding);
+Lecture 2 -- Image and Video Coding Techniques (part 1)
+Introduction to Image Quantization & Transform coding; Still Image Codind (JPEG);
+Lecture 3 -- Image and Video Coding Techniques (part II)
+Subband Coding; Temporal Redundancy & Temporal Predictive Coding for Video; Assignment 1 Introduction
+Lecture 4 -- Video Compression
+Hybrid Video Coding; Motion Estimation & Compensation; Human Visual System (HVS) Characteristics; Digital Video Coding (DVC) Structure;
+Lecture 5 -- Video Compression Standards
+Digital Video Coding standards
+Lecture 6 -- Internet Streaming Media
+Internet Streaming Media Architecture: Client / Server Architecture; Real-time Transport Protocol (RTP); Session Description Protocol (SDP)
+Lecture 7 -- Multimedia Presentation & Content Description
+Real Time Streaming Protocol - "internet VCR controls", Inter-media synchronization; File Formats: Multimedia File Formats - requirements and features; Example MP4; MPEG-7 - Multimedia Content Description Interface and Schemes for Content Management
+Lecture 8 -- Image based Content Retrieval (part 1)
+Introduction to Image Indexing and Retrieval; Color Feature Extraction; Color based Image Indexing and Retrieval Techniques.
+Lecture 9 -- Image based Content Retrieval (part 2)
+Texture and Shape based Image Indexing and Retrieval;Assignment 1 Review and Assignment 2 Introduction
+Lecture 10 -- Image based Content Retrieval (part 3)
+Introduction to Video Indexing and Retrieval; Video Shot Detection and Segmentation; Video Segmentation in Compress Domain; Basic Techniques of Video Based Indexing and Retrieval
+Lecture 11 -- Tutorials on Multimedia Signal Processing
+Tutorials on Key Lecture Notes and questions
+Lecture 12 -- Course Overview
+

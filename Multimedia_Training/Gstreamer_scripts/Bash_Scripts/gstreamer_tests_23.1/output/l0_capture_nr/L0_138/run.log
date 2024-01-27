@@ -1,0 +1,258 @@
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 5, dropped: 5, current: 1.59, average: 0.86
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 5, dropped: 6, fps: 0.00, drop rate: 1.57
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 6, dropped: 6, current: 1.57, average: 0.85
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 6, dropped: 7, fps: 0.00, drop rate: 1.55
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 7, dropped: 7, current: 1.56, average: 0.84
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 7, dropped: 8, fps: 0.00, drop rate: 1.60
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 8, dropped: 8, current: 1.55, average: 0.83
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 8, dropped: 9, fps: 0.00, drop rate: 1.48
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 9, dropped: 9, current: 1.58, average: 0.82
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 9, dropped: 10, fps: 0.00, drop rate: 1.58
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 10, dropped: 10, current: 1.61, average: 0.82
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 10, dropped: 11, fps: 0.00, drop rate: 1.63
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 11, dropped: 11, current: 1.60, average: 0.82
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 11, dropped: 12, fps: 0.00, drop rate: 1.62
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 12, dropped: 12, current: 1.60, average: 0.82
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 12, dropped: 13, fps: 0.00, drop rate: 1.54
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 13, dropped: 13, current: 1.59, average: 0.81
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 13, dropped: 14, fps: 0.00, drop rate: 1.64
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 14, dropped: 14, current: 1.59, average: 0.81
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 14, dropped: 15, fps: 0.00, drop rate: 1.57
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 15, dropped: 15, current: 1.59, average: 0.81
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 15, dropped: 16, fps: 0.00, drop rate: 1.58
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 16, dropped: 16, current: 1.61, average: 0.81
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 16, dropped: 17, fps: 0.00, drop rate: 1.67
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 17, dropped: 17, current: 1.63, average: 0.81
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 17, dropped: 18, fps: 0.00, drop rate: 1.60
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 18, dropped: 18, current: 1.57, average: 0.81
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 18, dropped: 19, fps: 0.00, drop rate: 1.54
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 19, dropped: 19, current: 1.59, average: 0.81
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 19, dropped: 20, fps: 0.00, drop rate: 1.65
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 20, dropped: 20, current: 1.55, average: 0.81
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 20, dropped: 21, fps: 0.00, drop rate: 1.49
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 21, dropped: 21, current: 1.58, average: 0.81
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 21, dropped: 22, fps: 0.00, drop rate: 1.52
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 22, dropped: 22, current: 1.52, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 22, dropped: 23, fps: 0.00, drop rate: 1.60
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 23, dropped: 23, current: 1.59, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 23, dropped: 24, fps: 0.00, drop rate: 1.58
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 24, dropped: 24, current: 1.60, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 24, dropped: 25, fps: 0.00, drop rate: 1.53
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 25, dropped: 25, current: 1.54, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 25, dropped: 26, fps: 0.00, drop rate: 1.54
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 26, dropped: 26, current: 1.58, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 26, dropped: 27, fps: 0.00, drop rate: 1.53
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 27, dropped: 27, current: 1.59, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 27, dropped: 28, fps: 0.00, drop rate: 1.56
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 28, dropped: 28, current: 1.57, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 28, dropped: 29, fps: 0.00, drop rate: 1.64
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 29, dropped: 29, current: 1.62, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 29, dropped: 30, fps: 0.00, drop rate: 1.55
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 30, dropped: 30, current: 1.56, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 30, dropped: 31, fps: 0.00, drop rate: 1.59
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 31, dropped: 31, current: 1.65, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 31, dropped: 32, fps: 0.00, drop rate: 1.63
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 32, dropped: 32, current: 1.60, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 32, dropped: 33, fps: 0.00, drop rate: 1.59
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 33, dropped: 33, current: 1.62, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 33, dropped: 34, fps: 0.00, drop rate: 1.58
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 34, dropped: 34, current: 1.62, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 34, dropped: 35, fps: 0.00, drop rate: 1.63
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 35, dropped: 35, current: 1.64, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 35, dropped: 36, fps: 0.00, drop rate: 1.57
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 36, dropped: 36, current: 1.58, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 36, dropped: 37, fps: 0.00, drop rate: 1.55
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 37, dropped: 37, current: 1.58, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 37, dropped: 38, fps: 0.00, drop rate: 1.55
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 38, dropped: 38, current: 1.52, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 38, dropped: 39, fps: 0.00, drop rate: 1.51
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 39, dropped: 39, current: 1.49, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 39, dropped: 40, fps: 0.00, drop rate: 1.51
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 40, dropped: 40, current: 1.62, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 40, dropped: 41, fps: 0.00, drop rate: 1.61
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 41, dropped: 41, current: 1.59, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 41, dropped: 42, fps: 0.00, drop rate: 1.56
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 42, dropped: 42, current: 1.69, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 42, dropped: 43, fps: 0.00, drop rate: 1.63
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 43, dropped: 43, current: 1.58, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 43, dropped: 44, fps: 0.00, drop rate: 1.64
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 44, dropped: 44, current: 1.62, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 44, dropped: 45, fps: 0.00, drop rate: 1.63
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 45, dropped: 45, current: 1.63, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 45, dropped: 46, fps: 0.00, drop rate: 1.61
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 46, dropped: 46, current: 1.61, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 46, dropped: 47, fps: 0.00, drop rate: 1.52
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 47, dropped: 47, current: 1.57, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 47, dropped: 48, fps: 0.00, drop rate: 1.53
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 48, dropped: 48, current: 1.57, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 48, dropped: 49, fps: 0.00, drop rate: 1.53
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 49, dropped: 49, current: 1.61, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 49, dropped: 50, fps: 0.00, drop rate: 1.60
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 50, dropped: 50, current: 1.51, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 50, dropped: 51, fps: 0.00, drop rate: 1.58
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 51, dropped: 51, current: 1.57, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 51, dropped: 52, fps: 0.00, drop rate: 1.53
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 52, dropped: 52, current: 1.58, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 52, dropped: 53, fps: 0.00, drop rate: 1.59
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 53, dropped: 53, current: 1.53, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 53, dropped: 54, fps: 0.00, drop rate: 1.57
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 54, dropped: 54, current: 1.57, average: 0.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 54, dropped: 55, fps: 0.00, drop rate: 1.50
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 55, dropped: 55, current: 1.53, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 55, dropped: 56, fps: 0.00, drop rate: 1.60
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 56, dropped: 56, current: 1.57, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 56, dropped: 57, fps: 0.00, drop rate: 1.53
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 57, dropped: 57, current: 1.60, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 57, dropped: 58, fps: 0.00, drop rate: 1.53
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 58, dropped: 58, current: 1.51, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 58, dropped: 59, fps: 0.00, drop rate: 1.60
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 59, dropped: 59, current: 1.61, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 59, dropped: 60, fps: 0.00, drop rate: 1.56
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 60, dropped: 60, current: 1.52, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 60, dropped: 61, fps: 0.00, drop rate: 1.47
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 61, dropped: 61, current: 1.54, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 61, dropped: 62, fps: 0.00, drop rate: 1.64
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 62, dropped: 62, current: 1.59, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 62, dropped: 63, fps: 0.00, drop rate: 1.61
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 63, dropped: 63, current: 1.64, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 63, dropped: 64, fps: 0.00, drop rate: 1.57
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 64, dropped: 64, current: 1.56, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 64, dropped: 65, fps: 0.00, drop rate: 1.66
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 65, dropped: 65, current: 1.57, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 65, dropped: 66, fps: 0.00, drop rate: 1.61
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 66, dropped: 66, current: 1.58, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 66, dropped: 67, fps: 0.00, drop rate: 1.49
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 67, dropped: 67, current: 1.54, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 67, dropped: 68, fps: 0.00, drop rate: 1.59
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 68, dropped: 68, current: 1.56, average: 0.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 68, dropped: 69, fps: 0.00, drop rate: 1.51
+WARNING: from element /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: A lot of buffers are being dropped.
+../git/libs/gst/base/gstbasesink.c(3151): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0:

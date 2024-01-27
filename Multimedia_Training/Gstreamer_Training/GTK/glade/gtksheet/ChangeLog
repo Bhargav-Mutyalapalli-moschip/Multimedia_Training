@@ -1,0 +1,728 @@
+2018-12-22 Fredy Paquet <mailbox AT opag.ch>
+* updated gtksheet-3 version to 3.5.1, Libtool Revision 10.1.0
+* fixed segv caused by remove_thousands_seps() 308433
+* published gtksheet-3 version 3.5.1
+
+2018-12-22 Fredy Paquet <mailbox AT opag.ch>
+* fixed paths in SlickEdit project file
+
+2018-12-10 Fredy Paquet <mailbox AT opag.ch>
+* fixed build gtkdoc: gtkdoc-mktmpl: command not found
+
+2018-04-05 Fredy Paquet <mailbox AT opag.ch>
+* renamed GtkExtra to GtkSheet
+* removed Plot widgets and related stuff
+* updated gtksheet-3 version to 3.5.0, Libtool Revision 10.0.0
+* published gtksheet-3 version 3.5.0
+
+2017-09.24 Fredy Paquet <mailbox AT opag.ch>
+	* merged branch pc217304
+	* updated gtkextra-3 version to 3.3.4, Libtool Revision 9.4.1
+	* published gtkextra-3 version 3.3.4
+
+2017-06-23 Fredy Paquet <mailbox AT opag.ch>
+        * GtkDataEntry - added character input mapping Map()
+
+2017-06-22 Fredy Paquet <mailbox AT opag.ch>
+        * GtkDataEntry - memory hole fixed PR#217304
+        * GtkDataEntry - fixed max_len_bytes check on paste PR#217304
+        * GtkDataEntry - added input filters Ignore(), Accept(), Reject()
+
+2017-01-01 Fredy Paquet <mailbox AT opag.ch>
+	* Glade-Integration: got new icons, thanks to <droli@thebajors.com>
+
+2016-11-06 Fredy Paquet <mailbox AT opag.ch>
+	* gtksheet.c - reduce flicker in autoresize rows/cells PR#213228
+	* updated gtkextra-3 version to 3.3.3, Libtool Revision 9.3.1
+	* published gtkextra-3 version 3.3.3
+
+2016-11-01 Fredy Paquet <mailbox AT opag.ch>
+	* gtksheet.c - disabled unconditional g_debug PR#213205
+
+2016-10-16 Fredy Paquet <mailbox AT opag.ch>
+	* gtkitementry.c - fixed ABORT on missing focus-out PR#212710
+
+2016-10-02 Fredy Paquet <mailbox AT opag.ch>
+	* gtkdataformat.c - fixed thousands_sep (utf8) PR#212243
+
+2016-09-18 Fredy Paquet <mailbox AT opag.ch>
+	* updated gtkextra-3 version to 3.3.2, Libtool Revision 9.2.1
+	* published gtkextra-3 version 3.3.2
+
+2016-09-18 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: support for number grouping (India)
+
+2016-08-07 Fredy Paquet <mailbox AT opag.ch>
+	* updated gtkextra-3 version to 3.3.1, Libtool Revision 9.1.1
+	* published gtkextra-3 version 3.3.1
+	* merged branch bugfix into master
+
+2016-08-07 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed clear active cell when scrolling PR#211566
+	* GtkSheet: merged branch traverse-type into master
+	* updated gtkextra-3 version to 3.3.0, Libtool Revision 9.0.1
+	* published gtkextra-3 version 3.3.0
+
+2016-05-29 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: tab/backtab fix PR#210301
+	* GtkSheet: moved GTK_SHEET_COLUMN_CAN_FOCUS() to gtksheetcolumn.h
+	* GtkSheet: added GTK_SHEET_COLUMN_SET_CAN_FOCUS()
+	* GtkSheet: new feature GtkSheetTraverseType to control wether tab/backtab moves to editable cells only (thanks to Shiva Ramabadran <shiva.ramabadran@gmail.com>)
+
+2016-05-22 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed row/column extent calculation (thanks to Shiva Ramabadran <shiva.ramabadran@gmail.com>)
+	* GtkSheet: expose gtk_sheet_width() and gtk_sheet_height() (thanks to Shiva Ramabadran <shiva.ramabadran@gmail.com>)
+	* GtkSheet: tab/backtab fix (thanks to Shiva Ramabadran <shiva.ramabadran@gmail.com>)
+
+2015-10-18 Fredy Paquet <mailbox AT opag.ch>
+        * Patch 22 applied - memory leaks in GtkPlotData
+
+2015-10-03 Fredy Paquet <mailbox AT opag.ch>
+	* GtkPlot*: merged api fixes to support binding generation via Gir-File
+	* GtkPlotCanvas: new enum GtkPlotCanvasChildFlags
+	* GtkPlotCanvas: changed type of a struct member in _GtkPlotCanvasChild from
+ GtkPlotCanvasFlag to GtkPlotCanvasChildFlags
+	* updated gtkextra-3 version to 3.2.0, Libtool Revision 8.0.0
+	* published gtkextra-3 version 3.2.0
+
+2015-08-07 Fredy Paquet <mailbox AT opag.ch>
+	* GtkPlot*: fixed types and annotations for interface generation via Gir file
+
+2015-08-01 Fredy Paquet <mailbox AT opag.ch>
+	* GtkDataEntry: fix dataformat race condition in gtk_data_entry_get_text() PR#205431
+	* updated gtkextra-3 version to 3.1.5, Libtool Revision 7.5.0
+	* published gtkextra-3 version 3.1.5
+
+2015-07-04 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fix SEGV in draw_xor_rectangle() PR#203012,201893,203139,204742
+	* GtkSheet: fix Invalid read of size 4 in _gtk_sheet_move_query()
+	* updated gtkextra-3 version to 3.1.4, Libtool Revision 7.4.0
+	* published gtkextra-3 version 3.1.4
+
+2015-05-29 Tom Schoonjans <Tom.Schoonjans AT me.com>
+	* spec file: docs install path updated
+
+2015-02-07 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed auto-scrolling for invisible columns PR#202688
+	* GtkSheet: changed gtk_sheet_moveto() enum params from gdouble to gint
+	* updated gtkextra-3 version to 3.1.3, Libtool Revision 7.3.0
+	* published gtkextra-3 version 3.1.3
+
+2015-02-01 Fredy Paquet <mailbox AT opag.ch>
+	* fixed docs install path (conflicts with gtkextra-2)
+
+2014-12-26 Fredy Paquet <mailbox AT opag.ch>
+	* updated gtkextra-3 version to 3.1.2, Libtool Revision 7.2.0
+	* published gtkextra-3 version 3.1.2
+
+2014-07-31 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed sheet editor contents when setting text of active cell PR#104553
+
+2014-07-13 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed dataformat on cell deactivation PR#104167
+
+2014-05-31 Fredy Paquet <mailbox AT opag.ch>
+	* GtkPSFont, GtkSheet, GtkSheetColumn: fixed some compiler warnings
+
+2014-03-16 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed several critical warnings during object destruction PR#102114
+
+2014-03-09 Fredy Paquet <mailbox AT opag.ch>
+	* Merged bugfix branch
+	* updated gtkextra-3 version to 3.1.1, Libtool Revision 7.1.0
+
+2014-03-08 Fredy Paquet <mailbox AT opag.ch>
+	* GtkItemEntry: prefix all functions with "_item_entry" to prevent confusion with GtkEntry
+	* GtkItemEntry: fix SEGV, correctly chain up object destruction, PR#101967, PR#101214, PR#100847, PR#101004
+
+2014-02-02 Fredy Paquet <mailbox AT opag.ch>
+	* Reworked libtool versioning scheme, now documented in developer CMS
+	* configure.ac - re-initialized libtool versioning
+	   removed GTK_EXTRA_INTERFACE_AGE and GTK_EXTRA_BINARY_AGE
+	* updated gtkextra-3 version to 3.1.0, Libtool Revision 7.0.0
+	* published gtkextra-3 version 3.1.0
+
+2013-12-31 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed SEGV caused by missing child reference counting PR#100392
+	* GtkSheet: added parameter checks to gtk_sheet_attach()
+	* GtkSheet: optimized scrolling behaviour with many sheet childs PR#99118
+	* GtkSheet: fixed SEGV in _get_string_extent()
+	* GtkSheet: set focus when tabbing into the sheet (prevent invisible focus) PR#95144
+
+2013-12-30 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed warnings and SEGV in gtk_sheet_forall_handler() for invalid childs
+
+2013-12-08 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed maximum autosized row height
+	* GtkSheet: fixed typo, reworked debug output
+	* GtkDataTextView: cut too long texts when pasting into length limited buffer
+	* GtkSheet: finished GtkSheetColumn->wrap_mode in cell drawing PR#95931
+	* GtkSheet: fixed SEGV in _gtk_sheet_entry_size_allocate
+	* GtkSheet: fixed vertical scrolling problems
+
+2013-07-19 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheetColumn: fixed sheet realized check that caused SEGV
+
+2013-07-02 Fredy Paquet <mailbox AT opag.ch>
+	* merged branch gtk3 into master
+
+2013-06-28 Fredy Paquet <mailbox AT opag.ch>
+	* replaced deprecated accessor: GtkWidget->parent 
+	* replaced deprecated accessor: GdkCursor->type
+	* replaced deprecated accessor: GtkContainer->border_width
+	* replaced deprecated accessor: GtkEntry->is_cell_renderer
+	* GtkSheet: fixed custom sheet_entry assignment, update testgtksheet
+	* GtkDataTextView: fixed entry setup during cell activation
+
+2013-06-27 Fredy Paquet <mailbox AT opag.ch>
+	* replaced deprecated GTK_SIGNAL_FUNC with G_CALLBACK
+	* disabled deprecated GTK_TYPE_COMBO_BOX_ENTRY from Gtk 2.24
+	* disabled deprecated GTK_TYPE_COMBO from Gtk 2.4 (yes, 2.4!)
+	* GtkSheet: clean out deprecated GtkAdjustment accessors
+
+2013-06-26 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: pango font description handling rewritten to prevent occasional crashes
+	* GtkSheet: fixed memory leak in font description handling
+	* merged branch GtkDataTextView into master
+	* GtkSheet: doc fix
+
+2013-06-25 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: code cleanup, GtkDataTextView key binding in sheet fixed
+
+2013-06-24 Fredy Paquet <mailbox AT opag.ch>
+	* GtkDataTextView: new subclass of GtkTextView to limit multiline text length
+	* GtkDataEntry: resolved deprecated G_CONST_RETURN
+	* GtkItemEntry: added internal max_length_bytes property
+	* GtkSheetColumn: added max_length, max_length_bytes, wrap_mode properties
+	* GtkSheet: added new sheet_entry-editor GtkDataTextView
+	* GtkSheet: reworked editor type switching for GtkDataTextView
+	* GtkSheet: update new editor properties in sheet-entry
+
+2013-06-23 Fredy Paquet <mailbox AT opag.ch>
+	* GtkItemEntry: fixed UTF-8 character insertion, killing trailing text (PR#96868)
+	* new branch GtkDataTextView for development of property enhancements 
+	* GtkDataEntry: added new property max-length-bytes
+	* Glade-Integration: added <book> tag to catalog
+
+2013-06-22 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed memory leak in _gtk_sheet_entry_setup()
+	* GtkSheet: fixed memory leak in DeleteRow()
+	* GtkSheet: fixed memory leak in DeleteColumn()
+	* GtkSheet: fixed cell activation in gtk_sheet_delete_columns()
+
+2013-06-19 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: signal documentation fixed
+
+2013-05-26 Fredy Paquet <mailbox AT opag.ch>
+	* published gtkextra-3 version 3.0.5
+	* updated gtkextra-3 version to 3.0.6
+
+2013-05-26 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed drawing with invisible columns at realize PR#92947
+	* GtkSheet: cleanup debug defines
+
+2013-05-19 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: added 'window' param to gtk_sheet_get_pixel_info()
+	   - enabling correct decoding of clicks into the row/column header area
+	* GtkSheet: reworked global sheet button press handler
+	   - will only handle single-press button1 events internally
+	   - propagate all other button-press-events to the sheet
+	   - allows you to connect your own handler to process right-clicks now
+
+2013-05-18 Fredy Paquet <mailbox AT opag.ch>
+	* Merged Tom Schoonjans packaging branch into master
+	* packages can now be created using:
+	   rpmbuild on Fedora/Centos/ScientificLinux
+	   dh_make on Debian/Ubuntu
+
+2013-04-19 Fredy Paquet <mailbox AT opag.ch>
+	* Glade Integration: added gtk+extra-catalog.xml to .gitignore (generated)
+
+2013-04-07 Fredy Paquet <mailbox AT opag.ch>
+	* Glade Integration: fixed soname generation in glade catalog xml for win32
+
+2013-03-23 Fredy Paquet <mailbox AT opag.ch>
+	* published gtkextra-3 version 3.0.4
+	* updated gtkextra-3 git version to 3.0.5
+
+2013-03-23 Fredy Paquet <mailbox AT opag.ch>
+	* GtkItemEntry: remove debug output when debug is off
+	* GtkSheet: fixed h/voffset when deleting rows PR#90224, PR#95088
+	* GtkSheet: fixed horizontal scrollbar size
+	* GtkExtra: removed Makefile.mingw, config.h.win32
+	* GtkExtra: cleanup extra distribution files
+
+2013-03-19 Daisuke Shimamura <daisuke_shimamura AT nifty.com>
+	* GtkPlot: patch for UTF-8 string handling
+
+2013-03-17 Fredy Paquet <mailbox AT opag.ch>
+	* MinGW: fixed autoconf environment, reworked Git exceptions
+	* Glade integration: fixed build problems in MinGW
+
+2013-03-16 Fredy Paquet <mailbox AT opag.ch>
+	* cleanup build environment
+	* migration to git repo
+	* cleanup handling of generated files for git
+
+2013-03-13 Tom Schoonjans <Tom.Schoonjans AT me.com>
+	* fixed build problem of 3.0.3
+	* upgraded configure.in script to latest autoconf standards including
+	rename to configure.ac
+	* removed several non-essential buildscript files that can be generated by the
+	developer with autoreconf
+	* removed several non-essential source files that can be generated by the
+	user when running make
+
+2013-03-10 Fredy Paquet <mailbox AT opag.ch>
+	* cleanup configure.in and automake problems on MinGW
+
+2013-03-10 Fredy Paquet <mailbox AT opag.ch>
+	* published gtkextra-3 version 3.0.3
+	* updated gtkextra-3 cvs version to 3.0.4
+
+2013-03-10 Fredy Paquet <mailbox AT opag.ch>
+	* GtkPlot: doc update
+
+2013-03-10 Daisuke Shimamura <daisuke_shimamura AT nifty.com>
+	* GtkPlot: patch to fix MinGW missing drawing problem Bug ID: 3182951
+	* GtkPlot: patch for SEGV in gtk_plot_cairo_draw_pixmap()
+	* GtkPlot: patch for image size in testgtkplot.c
+
+2013-03-03 Fredy Paquet <mailbox AT opag.ch>
+	* published gtkextra-3 version 3.0.2
+	* updated gtkextra-3 cvs version to 3.0.3
+
+2013-02-17 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed vertical and horizontal GtkItemEntry alignment
+	* GtkSheet: fixed dirty text redraw when clip_text is off
+
+2012-12-20 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed SEGV when deleting rows with unrealized childs
+
+2012-11-30 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed entry_type switching when moving around the sheet
+
+2012-11-25 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: new signal GtkSheet::enter-pressed to intercept default action
+
+2012-11-11 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed update of sheet_entry style when moving around colored cells
+	* GtkItemEntry: fixed justification propagation to GtkEntry alignment
+	* GtkSheet: fixed clipping of active cell border
+	* GtkSheet: fixed sheet_move_query check when tabbing around w/scrollbars
+	* GtkSheet: fixed set_active_cell to scroll active cell into view range
+	* GtkSheet: fixed signal documentation bug: NEW_ROW_HEIGHT, NEW_COL_WIDTH
+
+2012-10-04 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: new signal #GtkSheet::populate-popup propagates sheet_entry signal
+
+2012-10-03 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: auto-resize on window size modification fixed
+	* GtkSheet: cleanup debug defines
+
+2012-09-28 Fredy Paquet <mailbox AT opag.ch>
+	* GtkDataEntry, GtkSheetColumn: fixed removal of thousands separator
+
+2012-09-14 Fredy Paquet <mailbox AT opag.ch>
+	* GtkDataEntry, GtkSheetColumn: fixed formatting for non POSIX/C locales (UTF-8)
+
+2012-09-09 Fredy Paquet <mailbox AT opag.ch>
+	* GtkDataEntry, GtkSheetColumn: fixed formatting for non POSIX/C locales
+	* GtkSheet: experimental support for cell text preselection (incomplete)
+	* GtkSheet: fixed missing return value in _gtk_sheet_move_query()
+	* GtkSheet: fixed return type of _gtk_sheet_count_visible()
+
+2012-09-01 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: reworked drag/resize of sheet selection w/invisible columns
+
+2012-09-01 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed drawing, dirty edges beyond rightmost column
+	* GtkSheet: use style background for area beyond outmost row/column
+	* GtkSheet: reworked drag/resize of sheet selection w/invisible columns
+
+2012-08-01 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed extent calculation and autoresize w/unrealized window
+	* added misc/gtkextra.vpj (slickedit project file)
+	* GtkSheet: horizontal adjustment partially fixed
+
+2012-07-31 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: removed obsolete Sheet::changed signal emissions
+	   for column width modifications connect to Sheet::new-column-width
+	   for row height modifications connect to Sheet::new-column-width
+	* GtkSheet: reworked emission of Sheet::changed
+	   gtk_sheet_column_button_add_label() always emitted (even when frozen)
+	   gtk_sheet_column_button_justify() no longer emitted (contents unchanged)
+	   gtk_sheet_column_label_set_visibility() no longer emitted (contents unchanged)
+	   gtk_sheet_row_button_add_label() always emitted (even when frozen)
+	   gtk_sheet_row_label_set_visibility() no longer emitted (contents unchanged)
+	   gtk_sheet_row_button_justify() no longer emitted (contents unchanged)
+	* GtkSheet: sheet button drawing reworked and optimized
+	* GtkSheet: autoresize completely rewritten and optimized
+
+2012-07-29 Fredy Paquet <mailbox AT opag.ch>
+	* gtkplot.h: replaced callbacks in _GtkPlotAxis with function typedefs
+	  https://bugzilla.gnome.org/show_bug.cgi?id=674002
+	* cleanup documentation tags (introspection warnings)
+	* re-generated GtkExtra-3.0.gir, added GtkExtra-3.0.typelib
+	* GtkSheet: new properties autoresize-rows, autoresize-cells
+	* GtkSheet: experimental support for autoresize-rows (not optimized)
+
+2012-07-22 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: improved autoresize columns (max width limit)
+
+2012-06-04 Fredy Paquet <mailbox AT opag.ch>
+	* fixed autoconf m4 includedir in autogen.sh - Bug ID 3471311
+
+2012-06-04 Fredy Paquet <mailbox AT opag.ch>
+	* fixed autoconf m4 includedir - Bug ID 3471311
+
+2012-06-03 Fredy Paquet <mailbox AT opag.ch>
+	* Added m4/introspection.m4 to the distribution - Bug ID 3471311
+	* fixed dimension name dz - Bug ID 3450154
+
+2012-04-28 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: reworked KeyBindings to use Alt-Mod instead of Super-Mod (collisions on Win7)
+
+2012-04-22 Fredy Paquet <mailbox AT opag.ch>
+	* Gtk+3 Migration: Prepare: cleanup single includes
+
+2012-04-15 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed redraw problems when mapping a hidden, modified sheet
+
+2012-04-12 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: rewritten key event processing code to use GtkBindings
+	* GtkSheet: new move-cursor signal to support GtkBindings
+	* GtkSheet: advanced TAB control via gtk_sheet_set_tab_direction()
+	* GtkSheet: documented default bindings 
+	  http://gtkextra.sourceforge.net/cms/index.php?option=com_content&view=article&id=33&Itemid=19
+	* support for gobject-introspection V1.31.20
+	* build with --enable-introspection is broken (g-ir-compiler crashes)
+	* GtkExtra: raised version to 3.0.2
+
+2012-04-06 Fredy Paquet <mailbox AT opag.ch>
+	* replaced all keysyms with new names GDK_KEY_ (from Gtk 2.22, with compatibility support)
+
+2012-03-31 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed uninitialized memory access in gtk_sheet_realize_handler()
+
+2012-03-30 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: eliminated ** CRITICAL **: gtk_sheet_set_title: assertion `title != NULL' failed
+	* GtkSheet: fixed invalid memory access in gtk_sheet_cell_draw_label()
+
+2012-03-11 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed memory corruption in gtk_sheet_realize_handler()
+
+2012-02-19 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: prevent drawing outside of sheet area
+
+2012-01-04 Fredy Paquet <mailbox AT opag.ch>
+	* GtkItemEntry: incorporated patch from Bug ID 3439972
+
+2011-12-25 Fredy Paquet <mailbox AT opag.ch>
+	* GtkDataEntry: formatted display of contents is working now
+	* data formatter documented
+
+2011-12-24 Fredy Paquet <mailbox AT opag.ch>
+	* split gtksheet.[ch] into smaller pieces: gtksheetcolumn.[ch]
+	* added data formatting library (gtkdataformat.[ch])
+	* GtkSheet: new - formatted display of numeric cell data is now possible!
+
+2011-12-18 Roy Rankin <rrankin AT ihug DOT com DOT au>
+	* gtkextra/gtkcolorcombo.c: Fix array overflow - Bug ID 3316408
+
+2011-11-26 Fredy Paquet <mailbox AT opag.ch>
+	* fixed configure options - Bug ID 3414011
+
+2011-11-16 Fredy Paquet <mailbox AT opag.ch>
+	* fixed include problem with glib V2.31.0 (only glib.h can be included directly)
+
+2011-10-30 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: improved column button redraw, reduced flickering
+
+2011-10-29 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed dirty text display w/ clip_text off and ivisible columns
+	* GtkSheet: fixed gtk_sheet_set_active_cell() into invisible columns
+
+2011-10-09 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed gtk warning in gtk_sheet_set_active_cell()
+	* GtkSheet: new property 'description' for application use
+	* GtkSheetColumn: new method gtk_sheet_column_get() to get GtkSheetColumn objects
+
+2011-10-08 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed gtk_sheet_cell_get_tooltip_text()
+	* GtkSheet: global button press now toggles sheet selection
+	* GtkSheet: optimize: removed double cell activation on map
+	* GtkSheet, GtkSheetColumn: honor can-focus widget properties
+	* GtkSheetColumn: changed can-focus default setting to TRUE
+	* GtkSheet: fixed critical warning upon unmap
+
+2011-09-17 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed redraw problems when switching row/columns visible on/off
+	* GtkSheet: disable active cell when hiding active row/column
+	* GtkSheet: fixed sheet range when switching row/columns visible on/off
+
+2011-09-16 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed application crash when making hidden sheet columns visible
+
+2011-09-10 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed colormap allocation problem in gtk_sheet_range_set_background, gtk_sheet_range_set_foreground
+	* GtkSheet: optimized pixmap copy in gtk_sheet_cell_draw_label
+
+2011-08-19 Fredy Paquet <mailbox AT opag.ch>
+	* fixed more redraw problems on sheets without scrollbars
+
+2011-08-14 Fredy Paquet <mailbox AT opag.ch>
+	* modified GtkSheetColumn property 'datatype' to match GtkDataEntry definition
+	* replaced 'class' by 'klass' - as class is a registered c++ keyword
+
+2011-08-12 Fredy Paquet <mailbox AT opag.ch>
+        * new GtkDataEntry widget with formatting capabilities, not yet finished
+	* added GtkExtra-3.0.gir to the CVS repo
+
+2011-08-07 Fredy Paquet <mailbox AT opag.ch>
+        * documentation update - added own page for GtkSheetColumn and related
+	* updated documentation on sf project web
+	   http://gtkextra.sourceforge.net/docs/reference/index.html
+	* old reference manual moved to a subdirectory:
+	   http://gtkextra.sourceforge.net/docs/reference/gtkextra-2/index.html
+
+2011-08-05 Fredy Paquet <mailbox AT opag.ch>
+        * gtksheet.c: gtk_sheet_thaw() fixed redraw range and execution
+
+2011-05-01 Fredy Paquet <mailbox AT opag.ch>
+	* updated gtkextra-3 version to 3.0.1
+	* added Makefile.mingw in glade support files
+	   works together with a fresh build of glade3-3.8.0 on MinGW
+	* fixed bug ID 3250296: added gtkextra-compat.h to the gtkextra-3 distribution
+	* eliminated autoconf warnings on LT_CURRENT, LT_REVISION, LT_AGE
+	   ref: http://bugs.gentoo.org/show_bug.cgi?id=230199
+
+2011-04-10 Fredy Paquet <mailbox AT opag.ch>
+	* ./configure: better CFLAGS handling, respect environment and do not combine -g -O2 (it kills the debugger)
+
+2011-03-24 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: allow gtk_sheet_set_active_cell(sheet, -1, -1) to deactivate current cell
+
+2011-03-23 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed unwanted entry activation during hide_active_cell()
+		which lead to multiple focus signal emissions
+
+2011-03-22 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: new signals entry-focus-in, entry-focus-out 
+		in order to be able to track focus on the underlying sheet-entry
+
+2011-03-20 Fredy Paquet <mailbox AT opag.ch>
+	* gtkitementry.c: fixed bug ID: 3170287 in gtkextra-3
+
+2011-02-1 Fredy Paquet <mailbox AT opag.ch>
+	* added Makefile.mingw install target
+
+2011-02-1 Fredy Paquet <mailbox AT opag.ch>
+	* fixed Windows build environment
+	   tested on a fresh MinGW installation
+	   see build instructions in Makefile.mingw
+	* replaced Makefile.win32 by Makefile.mingw
+
+2011-01-09 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheetColumn: fixed abort() during gtk_widget_set_parent()
+	* replaced some deprecated GtkWidget macros
+
+2011-01-08 Fredy Paquet <mailbox AT opag.ch>
+	* fixed library naming in docs
+
+2011-01-07 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheetColumn: setup correct parent widget
+
+2010-12-17 Fredy Paquet <mailbox AT opag.ch>
+	* fixed library naming, now corresponding to V3.0 and the content of gtkextra-3.0.pc
+	* fixed gobject-introspection to include Gtk-2.0.gir
+	* Linux compilation tested
+	* fixed missing GLIB_GENMARSHAL in configure.in
+	* added missing VOID:INT,BOXED to gtkextra-marshal.list
+
+2010-11-30 Fredy Paquet <mailbox AT opag.ch>
+	* doc/tutorial/Makefile.am: fixed automake warnings
+	*** GtkSheet: new feature: added optional GObject-Introspection
+	   Reference: http://live.gnome.org/GObjectIntrospection
+	* added new ./configure option --enable-introspection
+	   to build GtkExtra-3.0.gir: cd gtkextra ; make GtkExtra-3.0.gir
+
+2010-10-18 Fredy Paquet <mailbox AT opag.ch>
+	*** GtkItemEntry: fixed major crash source in item entry buffer handling
+
+2010-10-15 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed cell and row/column deactivation while paging around
+	* GtkSheet: fixed background redraw when outmost column is invisible
+
+2010-08-21 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: new public interface function gtk_sheet_get_selection()
+
+2010-08-20 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: eliminated recursive call to from hide/show active cell (SEGV)
+	* GtkSheet: fixed auto-switch entry with active sheet range selections
+	* GtkSheet: added a set of signal debugging functions (GTK_SHEET_DEBUG_SIGNALS)
+
+2010-08-14 Fredy Paquet <mailbox AT opag.ch>
+	*** GtkSheet: auto-switch column sheet entry, if defined
+	   auto-switching will only take place, if the column or sheet entry_type is explicitly set
+	* GtkSheet: fixed GtkTextView positioning
+	* GtkSheet: fixed set-cell signal
+	* gtkextra/Makefile.am: fixed Bug ID 3021754
+
+2010-08-13 Fredy Paquet <mailbox AT opag.ch>
+	*** GtkSheetColumn: new properties: vertical cell text justification
+	* GtkSheet: fixed SEGV on global button press
+
+2010-08-07 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: reworked "changed" signal emission, cell data updates and cell redraw
+	* testgtksheet.c: reworked sheet_entry change, GtkSpinButton works now
+
+2010-08-07 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: replaced deprecated signal "pressed" on the global sheet button
+	*** GtkSheet: new feature: entry of multiline text via GtkTextView as sheet_entry
+	* GtkSheet: reworked sheet_entry widget processing
+	* GtkSheet: new public interface functions gtk_sheet_*entry* to access 
+	* testgtksheet.c: use GtkTextView for editing of column 3 in sheet 2
+
+2010-08-06 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: created a new GtkSheetEntryType in order to control it from glade-3
+	* GtkSheet: replaced column is_multiline property with entry_type
+	* GtkSheet: new public interface function gtk_sheet_get_entry_type()
+	* GtkSheet: re-activated sheet entry justification property, it works
+
+2010-08-05 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: added row and column tooltip markers
+	*** GtkSheetColumn: new properties is_key, is_readonly, is_multiline, data_format, data_type, description
+	    is_key, description have only informational character for the application
+	    is_readonly is implemented, others not yet
+	* GtkSheet: new public interface function to get/set the new properties
+	* gtkextra/*.c: documentation fixes - no more warnings by docgen
+
+2010-08-04 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: new tooltip feature, added to sheet, column, row and cell
+	* GtkSheet: new public interface functions to get/set tooltips on sheet, column, row and cell
+	* GtkSheet: added a small red triangle in the top right cell corner, if there is a tooltip attached
+	* gtksheettest: added some tooltips to the first sheet
+	* GtkSheet: fixed a bug in AddRow() which was destroying column data
+	* GtkSheet: reworked cell data allocation and deallocation
+	* GtkSheet: the cell is no longer cleared, when the text is deleted manually, 
+	    so attributes, tooltips, links remain in the cell, when you press the delete key
+	* GtkSheet: Calling gtk_sheet_cell_clear() function erases all data in the cells,
+	    to remove only the text, call gtk_sheet_set_cell_text() with NULL
+
+2010-08-03 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: Glade-3: cut/paste of sheets now works without dropping all columns
+	* GtkSheetColumn: new properties 'width', 'justification', also working with glade-3
+	* GtkSheetColumn: added column icons
+
+2010-07-30 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed cursor key handling in rightmost column
+	* GtkSheet: fixed deactivation of active cell on row deletion
+
+2010-07-30 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed cell editor width
+	* GtkSheet: fixed active cell redraw conditions
+
+2010-07-23 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed SEGV when resizing columns and there is no scrolled window below
+	* GtkSheet: fixed SEGV when resizing columns and there is no active cell
+	* GtkSheet: fixed redraw of visible cell area when row or column titles are switched off
+
+2010-07-16 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed: placement of the cell editor when clicking into empty cells
+	* GtkSheetColumn: defintively using visibility property of the underlying GtkWidget now
+	* GtkSheetColumn: using sensitivity property of the underlying GtkWidget now
+        * GtkSheet: new interface functions:
+		gtk_sheet_column_visible() 
+		gtk_sheet_row_visible()
+		gtk_sheet_column_sensitive()
+		gtk_sheet_row_sensitive()
+	* GtkSheet: resizeability of rows/cols was coupled to the sensitive property, 
+		rows/cols can now always be resized, independent of the sensitive property
+	* GtkSheet: fixed: the last row of the sheet could not be resized
+	* GtkSheet: fixed: left/right and up/down scrolling during sheet range selection
+
+2010-07-09 Fredy Paquet <mailbox AT opag.ch>
+        * new include file gtkextra-compat.h to maintain backward compatibility for older gtk releases
+	* added Pixmaps for Glade-3 integration: glade/pixmaps/hicolor
+	* GtkSheet: fixed SEGV when extending cell selection beyond sheet boundaries
+	* GtkSheet: double click between column titles will now always fit column width, not only enlarge
+
+2010-07-07 Roy Rankin <rrankin AT ihug DOT com DOT au>
+	* gtkextra/*.c : Remove instances of direct bin, widget usage
+
+2010-07-05 Roy Rankin <rrankin AT ihug DOT com DOT au>
+	* gtkextra/* : start remove depreciated GTK calls
+
+2010-06-26 Roy Rankin <rrankin AT ihug DOT com DOT au>
+	* configure.in : link with math lib required by Fedora 13
+
+2010-06-12 Roy Rankin <rrankin AT ihug DOT com DOT au>
+        * gtkextra/gtkitementry.c : patch to allow build with gtk2-21
+
+2010-05-22 Fredy Paquet <mailbox AT opag.ch>
+	*** GtkSheet: glade column editor implemented
+	* GtkSheet: still more SEGV fixed, concerning empty sheets (no cols, no rows)
+
+2010-05-21 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed sheet_editor size request
+	* GtkSheet: reworked resizing a cell selection range (better, but still not very good)
+
+2010-05-20 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed lots of SEGV in empty sheets (no rows, no cols)
+	* GtkSheet: moved all glade integration procs into glade-gtksheet-editor.c
+	* GtkSheet: removed all sheet debug output ifndef DEBUG
+	* GtkSheet: reworked selection range dragging code (more failsafe)
+
+2010-05-19 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed several SEGV in glade gtkextra integration
+	* GtkSheet: adding/removing columns from within glade works now
+	* GtkSheet: setting column property 'label' now works with GtkBuilder 
+	* GtkSheet: moved column visibility flag from GtkSheetColumn into the embedded GtkWidget
+	* GtkSheet: SEGV in keyboard processing fixed
+	*** added new ./configure option --enable-glade
+	* GtkSheet: added glade sheet editor source (not yet finished)
+	* GtkSheet: added po directory (glade support needs gettext installed)                    
+
+2010-05-18 Fredy Paquet <mailbox AT opag.ch>
+	*** GtkSheet: changed GtkSheetColumn into an object, subtype of GtkWidget
+	* GtkSheet: fixed several SEGV errors, most of them incorrect boundary handling
+	* GtkSheet: fixed scrollbar behaviour near the end of the sheet
+	* GtkSheet: experimental integration into GtkBuilder - not yet finished
+
+2010-05-14 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed gtk_sheet_get_child_at(): returned wrong child under certain conditions
+	* GtkSheet: fixed some function declarations
+	* GtkSheet: fixed some +1/-1 problems that caused SEGV
+	* GtkSheet: fixed some doc tags
+
+2010-05-12 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet: fixed doc generation - there is still a problem with gtk_plot_marker_get_type
+	* GtkSheet: fixed redraw problems on sheets with 0 rows or 0 columns
+	* GtkSheet: fixed doc comments in gtksheet
+
+2010-05-11 Fredy Paquet <mailbox AT opag.ch>
+	* GtkSheet properties completed
+	* GtkSheet: bugfix: default grid color is now uniq
+	* GtkSheet: replaced obsolete function gdk_color_alloc()
+	* GtkSheet: fixed gtk_sheet_set_selection_mode() parameter type
+
+2010-05-09 Fredy Paquet <mailbox AT opag.ch>
+	* changed --enable-debug option to non destructive behaviour
+	*** Added initial Glade support to GtkSheet
+	  * properties "title", "n-rows", "n-cols"
+	  * class initialisation code adapted
+	* GtkSheet: some drawing problems need fixing when the sheet gets 0 rows/cols
+
+2010-05-08 Fredy Paquet <mailbox AT opag.ch>
+	*** added --enable-debug option to the configure script, default is off (-O2).
+	* GtkSheet: Fixed a crash when double clicking between column headers
+
+2010-05-04 Fredy Paquet <mailbox AT opag.ch>
+	* Fixed some minor portability issues:
+	  * test -e is not available in /bin/sh
+	  * echo -n doesn't work with all versions of 'echo'
+	* Added some portability checks to configure.in (using autoscan)
+	* Fixed spaces in front of two make commandlines (@GLIB_GENMARSHAL@)
+
+

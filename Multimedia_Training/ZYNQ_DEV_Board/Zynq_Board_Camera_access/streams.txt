@@ -1,0 +1,45 @@
+
+4 streams
+
+1)
+gst-launch-1.0 v4l2src device=/dev/video2 io-mode=4 ! video/x-raw, width=1920, height=1080, format=NV12, framerate=60/1 ! xilinxscd io-mode=5 ! omxh265enc qp-mode=auto gop-mode=basic gop-length=60 b-frames=0 target-bitrate=60000 num-slices=8 control-rate=constant prefetch-buffer=true low-bandwidth=false filler-data=true cpb-size=1000 initial-delay=500 ! video/x-h265, profile=main, alignment=au ! queue ! omxh265dec internal-entropy-buffers=5 low-latency=0 ! queue max-size-bytes=0 ! fpsdisplaysink name=fpssink text-overlay=false fps-update-interval=1000 video-sink="kmssink bus-id="a0070000.v_mix" plane-id=36 render-rectangle=<0,540,960,1080> show-preroll-frame=false" -v &
+
+
+2)
+gst-launch-1.0 v4l2src device=/dev/video0 io-mode=4 ! video/x-raw, width=1920, height=1080, format=NV12, framerate=60/1 ! xilinxscd io-mode=5 ! omxh265enc qp-mode=auto gop-mode=basic gop-length=60 b-frames=0 target-bitrate=60000 num-slices=8 control-rate=constant prefetch-buffer=true low-bandwidth=false filler-data=true cpb-size=1000 initial-delay=500 ! video/x-h265, profile=main, alignment=au ! queue ! omxh265dec internal-entropy-buffers=5 low-latency=0 ! queue max-size-bytes=0 ! fpsdisplaysink name=fpssink text-overlay=false fps-update-interval=1000 video-sink="kmssink bus-id="a0070000.v_mix" plane-id=39 render-rectangle=<0,0,960,540> show-preroll-frame=false" -v &
+
+3)
+gst-launch-1.0 v4l2src device=/dev/video3 io-mode=4 ! video/x-raw, width=1920, height=1080, format=NV12, framerate=60/1 ! xilinxscd io-mode=5 ! omxh265enc qp-mode=auto gop-mode=basic gop-length=60 b-frames=0 target-bitrate=60000 num-slices=8 control-rate=constant prefetch-buffer=true low-bandwidth=false filler-data=true cpb-size=1000 initial-delay=500 ! video/x-h265, profile=main, alignment=au ! queue ! omxh265dec internal-entropy-buffers=5 low-latency=0 ! queue max-size-bytes=0 ! fpsdisplaysink name=fpssink text-overlay=false fps-update-interval=1000 video-sink="kmssink bus-id="a0070000.v_mix" plane-id=37 render-rectangle=<960,540,1920,1080> show-preroll-frame=false" -v 
+
+
+4)
+gst-launch-1.0 v4l2src device=/dev/video1 io-mode=4 ! video/x-raw, width=1920, height=1080, format=NV12, framerate=60/1 ! xilinxscd io-mode=5 ! omxh265enc qp-mode=auto gop-mode=basic gop-length=60 b-frames=0 target-bitrate=60000 num-slices=8 control-rate=constant prefetch-buffer=true low-bandwidth=false filler-data=true cpb-size=1000 initial-delay=500 ! video/x-h265, profile=main, alignment=au ! queue ! omxh265dec internal-entropy-buffers=5 low-latency=0 ! queue max-size-bytes=0 ! fpsdisplaysink name=fpssink text-overlay=false fps-update-interval=1000 video-sink="kmssink bus-id="a0070000.v_mix" plane-id=35 render-rectangle=<960,0,1920,540> show-preroll-frame=false" -v &
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

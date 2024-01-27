@@ -1,0 +1,2 @@
+playback-exe v4l2src /dev/video0 serial avc resolution 4kp60 profile main bitrate 40000 control-rate variable gop-mode basic b-frames 0 slices 4 sink kmssink hdmi_display latency-mode normal loop-playback
+./gst_run.sh: line 1474: playback-exe: command not found

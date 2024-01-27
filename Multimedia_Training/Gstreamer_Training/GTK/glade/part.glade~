@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="window">
+    <property name="can_focus">False</property>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkFixed" id="fixed1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkButton" id="button1">
+            <property name="width_request">-1</property>
+            <property name="height_request">-1</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="tooltip_text" translatable="yes">click me</property>
+            <property name="always_show_image">True</property>
+            <signal name="clicked" handler="on_button1_clicked" swapped="no"/>
+            <child>
+              <object class="GtkImage" id="image">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="stock">gtk-media-play</property>
+                <property name="icon_size">6</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">23</property>
+            <property name="y">61</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label1">
+            <property name="width_request">96</property>
+            <property name="height_request">41</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">hidders is hidden in a hidden place
+</property>
+            <property name="xalign">0.5</property>
+            <property name="yalign">0.56000000238418579</property>
+            <attributes>
+              <attribute name="foreground" value="#20204a4a8787"/>
+              <attribute name="background" value="#ededd4d40000"/>
+              <attribute name="underline-color" value="#cccc00000000"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">18</property>
+            <property name="y">146</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button2">
+            <property name="width_request">64</property>
+            <property name="height_request">62</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_button2_clicked" swapped="no"/>
+            <child>
+              <object class="GtkImage" id="imag">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="stock">gtk-media-pause</property>
+                <property name="icon_size">6</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">153</property>
+            <property name="y">59</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label2">
+            <property name="width_request">90</property>
+            <property name="height_request">43</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">lets find the toughest way</property>
+            <attributes>
+              <attribute name="font-desc" value="Sans Bold Italic 10"/>
+              <attribute name="foreground" value="#cccc00000000"/>
+              <attribute name="background" value="#7373d2d21616"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">151</property>
+            <property name="y">139</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="button3">
+            <property name="width_request">78</property>
+            <property name="height_request">65</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <signal name="clicked" handler="on_button3_clicked" swapped="no"/>
+            <child>
+              <object class="GtkImage" id="ima">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Don't stop learning</property>
+                <property name="stock">gtk-media-stop</property>
+                <property name="icon_size">6</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="x">311</property>
+            <property name="y">59</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="width_request">87</property>
+            <property name="height_request">80</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <attributes>
+              <attribute name="font-desc" value="Serif Bold Italic 10"/>
+              <attribute name="foreground" value="#f5f579790000"/>
+              <attribute name="background" value="#34346565a4a4"/>
+            </attributes>
+          </object>
+          <packing>
+            <property name="x">322</property>
+            <property name="y">172</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

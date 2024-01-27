@@ -1,0 +1,13 @@
+In the context of video compression, redundancy refers to the unnecessary or repetitive information present in the video data that can be eliminated or compressed without significantly affecting the perceived quality of the video. The goal of video compression is to represent the video in a more efficient manner by reducing redundancy, thereby reducing the amount of data needed to represent the video while maintaining an acceptable level of visual quality.
+
+There are several types of redundancy in video compression:
+
+Spatial Redundancy: This type of redundancy exists within individual frames of the video. It refers to similarities or repeated patterns within a single frame. Techniques such as spatial prediction and transform coding (e.g., Discrete Cosine Transform - DCT) are used to remove spatial redundancy.
+
+Temporal Redundancy: This type of redundancy exists between consecutive frames of a video sequence. In many videos, adjacent frames are often very similar. Video compression algorithms exploit this by using motion estimation and compensation to represent the changes between frames efficiently.
+
+Statistical Redundancy: Statistical redundancy is related to the probability distribution of pixel values. If certain values or patterns are more likely to occur, statistical coding techniques like Huffman coding or Arithmetic coding can be used to represent these values more efficiently.
+
+Psychovisual Redundancy: This type of redundancy is related to the characteristics of the human visual system. Video codecs take advantage of limitations in human perception to remove details that may not be easily noticeable, allowing for more aggressive compression without a significant impact on perceived quality.
+
+Video compression standards, such as H.264, H.265 (HEVC), and others, employ various techniques to reduce these redundancies and achieve high compression ratios. By eliminating or minimizing redundant information, video codecs can significantly reduce the amount of data needed to represent a video stream, making it more suitable for storage, transmission, and playback on various devices with limited 

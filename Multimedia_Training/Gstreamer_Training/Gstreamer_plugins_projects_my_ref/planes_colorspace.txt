@@ -1,0 +1,111 @@
+YUV Color Space:
+
+In video and image processing, the YUV color space separates the image into three components: Y (luminance or brightness), U (chrominance or color information), and V (chrominance or color information).
+Each of these components is often stored in a separate plane.
+Planes in YUV:
+
+Y plane: Represents the brightness information and is usually stored in a separate plane.
+U plane: Represents the chrominance (color) information for the U channel.
+V plane: Represents the chrominance (color) information for the V channel.
+Memory Organization:
+
+Each plane is essentially a two-dimensional array in memory.
+The pixel values of a specific color component are stored in the corresponding positions in their respective planes.
+Accessing Color Information:
+
+When processing or manipulating color information in an image or video frame, developers often need to access and modify the data in each plane separately.
+Here's a simple representation:
+
+Y Plane      U (Cb) Plane      V (Cr) Plane
++-----------+ +-----------+ +-----------+
+| Y00 Y01   | | U00 U01   | | V00 V01   |
+| Y10 Y11   | | U10 U11   | | V10 V11   |
++-----------+ +-----------+ +-----------+
+
+In the above example, each letter and number represents a pixel value in the corresponding plane. The Y plane stores luminance information, while the U and V planes store chrominance information.
+
+Understanding and working with planes is crucial for efficient image and video processing, especially when dealing with different color spaces and formats. The macros like GST_VIDEO_INFO_COMP_PLANE in GStreamer help developers retrieve information about the memory planes associated with specific color components in a video frame.
+
+
+
+GstVideoChromaSite site = GST_VIDEO_INFO_CHROMA_SITE(&pre_video_info);
+		//gchar * gst_video_chroma_site_to_string (GstVideoChromaSite site)
+		gchar * str = gst_video_chroma_site_to_string(site);
+		g_print("the chroma site info:%s\n",str);
+
+		// Get colorimetry-related information
+		GstVideoColorimetry colorimetry = GST_VIDEO_INFO_COLORIMETRY(&pre_video_info);
+
+		// Access colorimetry information (this is just an example)
+		g_print("Range: %d\n", colorimetry.range);
+		g_print("Matrix: %d\n", colorimetry.matrix);
+		g_print("Color Range: %s\n", colorimetry.range == GST_VIDEO_COLOR_RANGE_0_255 ? "Full" : "Limited");
+
+		g_print("Color Matrix: %s\n", 
+				colorimetry.matrix == GST_VIDEO_COLOR_MATRIX_RGB ? "RGB" :
+				colorimetry.matrix == GST_VIDEO_COLOR_MATRIX_BT601 ? "BT.601" :
+				colorimetry.matrix == GST_VIDEO_COLOR_MATRIX_BT709 ? "BT.709" :
+				"Unknown");
+
+		// Get the bit depth of the first color component
+		int depth = GST_VIDEO_INFO_COMP_DEPTH(&pre_video_info, 0);
+		g_print("The pixel depth:%d\n",depth);
+
+		guint8 *luma_data = GST_VIDEO_INFO_COMP_DATA(&pre_video_info,&in_map.data,0);
+		guint8 *chru_data = GST_VIDEO_INFO_COMP_DATA(&pre_video_info,&in_map.data,1);
+		guint8 *chrv_data = GST_VIDEO_INFO_COMP_DATA(&pre_video_info,&in_map.data,2);
+		g_print("The luma     address:%p\n",luma_data);
+		g_print("The chroma u address:%p\n",luma_data);
+		g_print("The chroma v address:%p\n",luma_data);
+
+
+		gint info_height_y = GST_VIDEO_INFO_COMP_HEIGHT(&pre_video_info,0);
+		gint info_height_u = GST_VIDEO_INFO_COMP_HEIGHT(&pre_video_info,1);
+		gint info_height_v = GST_VIDEO_INFO_COMP_HEIGHT(&pre_video_info,2);
+
+		g_print("The Y height:%d\n",info_height_y);
+		g_print("The U height:%d\n",info_height_u);
+		g_print("The V height:%d\n",info_height_v);
+
+		gint info_width_y = GST_VIDEO_INFO_COMP_WIDTH(&pre_video_info,0);
+		gint info_width_u = GST_VIDEO_INFO_COMP_WIDTH(&pre_video_info,1);
+		gint info_width_v = GST_VIDEO_INFO_COMP_WIDTH(&pre_video_info,2);
+
+		g_print("The Y width:%d\n",info_width_y);
+		g_print("The U width:%d\n",info_width_u);
+		g_print("The V width:%d\n",info_width_v);
+
+		gint info_offset_y = GST_VIDEO_INFO_COMP_OFFSET(&pre_video_info,0);
+		gint info_offset_u = GST_VIDEO_INFO_COMP_OFFSET(&pre_video_info,1);
+		gint info_offset_v = GST_VIDEO_INFO_COMP_OFFSET(&pre_video_info,2);
+
+		g_print("The Y offset:%d\n",(info_offset_y/8));
+		g_print("The U offset:%d\n",(info_offset_u/8));
+		g_print("The V offset:%d\n",(info_offset_v/8));
+
+		gint y_plane =  GST_VIDEO_INFO_COMP_PLANE(&pre_video_info, 0);
+		gint u_plane =  GST_VIDEO_INFO_COMP_PLANE(&pre_video_info, 1);
+		gint v_plane =  GST_VIDEO_INFO_COMP_PLANE(&pre_video_info, 2);
+
+		g_print("The y_plane : %d\n",y_plane);
+		g_print("The u_plane : %d\n",u_plane);
+		g_print("The v_plane : %d\n",v_plane);
+
+		gint pix_offset_y = GST_VIDEO_INFO_COMP_POFFSET(&pre_video_info,0);
+		gint pix_offset_u = GST_VIDEO_INFO_COMP_POFFSET(&pre_video_info,1);
+		gint pix_offset_v = GST_VIDEO_INFO_COMP_POFFSET(&pre_video_info,2);
+
+		g_print("The y_pixel offset : %d\n",pix_offset_y);
+		g_print("The U_pixel offset : %d\n",pix_offset_u);
+		g_print("The v_pixel offset : %d\n",pix_offset_v);
+
+		gint plane_offset_y = GST_VIDEO_INFO_PLANE_OFFSET(&pre_video_info,0);
+		gint plane_offset_u = GST_VIDEO_INFO_PLANE_OFFSET(&pre_video_info,1);
+		gint plane_offset_v = GST_VIDEO_INFO_PLANE_OFFSET(&pre_video_info,2);
+
+		g_print("The Y plane offset:%d\n",(plane_offset_y/8));
+		g_print("The U plane offset:%d\n",(plane_offset_u/8));
+		g_print("The V plane offset:%d\n",(plane_offset_v/8));
+
+
+

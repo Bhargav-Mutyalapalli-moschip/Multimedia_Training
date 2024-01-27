@@ -1,0 +1,12 @@
+Resolution: 176x144, Result: Pass
+Resolution: 320x240, Result: Pass
+Resolution: 640x480, Result: Fail - Error: ERROR: from element /GstPipeline:pipeline0/GstVideoTestSrc:videotestsrc0: Internal data stream error.
+Additional debug info:
+../libs/gst/base/gstbasesrc.c(3127): gst_base_src_loop (): /GstPipeline:pipeline0/GstVideoTestSrc:videotestsrc0:
+streaming stopped, reason not-negotiated (-4)
+ERROR: pipeline doesn't want to preroll.
+Resolution: 1280x720, Result: Pass
+Resolution: 1920x1080, Result: Pass
+Resolution: 2560x1440, Result: Pass
+Resolution: 3840x2160, Result: Pass
+Resolution: 7680x4320, Result: Pass

@@ -1,0 +1,25 @@
+﻿S.no,Testcase #,Test type,Source,Bitstream,Resolution&Fps,Codec,Target Bitrate,Max Bitrate,Control Rate,GOP Mode,GOP Length,B-Frames,Format,Latency Mode,Profile,QP Mode,Num Slices,Num buffers,Prefetch Buffer,Multistream Mode,Slice size,Dependent slice,CPB size,Initial delay,Min QP,Max QP,Quant-I-frames,Quant-P-frames,Quant-B-frames,Filler-data,Low-bandwidth,Periodicity-idr,GDR Mode,Entropy Mode,Intra-prediction,Loop-filter-mode,Scaling-list,Aspect-ratio,Level,Tier,Entropy-buffers
+399,L1_399,maxbitrate,HDMI,,4kp60,AVC,240000,NA,constant,basic,60,0,NV12,normal,high,NA,4,21600,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5.2,NA,9
+400,L1_400,maxbitrate,HDMI,,4kp60,AVC,240000,NA,constant,basic,60,4,NV12,normal,high,NA,4,21600,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5.2,NA,9
+401,L1_401,maxbitrate,HDMI,,4kp60,HEVC,40000,NA,constant,basic,60,0,NV12,normal,main,NA,4,21600,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5.1,main,9
+402,L1_402,maxbitrate,HDMI,,4kp60,HEVC,240000,NA,constant,basic,60,4,NV12,normal,main,NA,4,21600,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5.2,high,9
+403,L1_403,maxbitrate,HDMI,,4kp60,HEVC,240000,NA,constant,basic,60,0,NV12,normal,main,NA,4,21600,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,6,high,9
+404,L1_404,maxbitrate,HDMI,,4kp60,HEVC,120000,NA,constant,basic,60,4,NV12,normal,main,NA,4,21600,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,6.1,main,9
+405,L1_405,maxbitrate,HDMI,,4kp60,HEVC,240000,NA,constant,basic,60,0,NV12,normal,main,NA,4,21600,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,6.2,main,9
+406,L1_406,maxbitrate,HDMI,,4kp30,AVC,240000,NA,constant,basic,30,4,NV12,normal,high,NA,4,10800,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5.1,NA,5
+407,L1_407,maxbitrate,HDMI,,4kp30,AVC,240000,NA,constant,basic,30,0,NV12,normal,high,NA,4,10800,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5.2,NA,5
+408,L1_408,maxbitrate,HDMI,,4kp30,HEVC,40000,NA,constant,basic,30,4,NV12,normal,main,NA,4,10800,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5.1,main,5
+409,L1_409,maxbitrate,HDMI,,4kp30,HEVC,240000,NA,constant,basic,30,0,NV12,normal,main,NA,4,10800,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5.2,high,5
+410,L1_410,maxbitrate,HDMI,,4kp30,HEVC,240000,NA,constant,basic,30,4,NV12,normal,main,NA,4,10800,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,6,high,5
+411,L1_411,maxbitrate,HDMI,,4kp30,HEVC,120000,NA,constant,basic,30,0,NV12,normal,main,NA,4,10800,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,6.1,main,5
+412,L1_412,maxbitrate,HDMI,,4kp30,HEVC,240000,NA,constant,basic,30,4,NV12,normal,main,NA,4,10800,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,6.2,main,5
+413,L1_413,maxbitrate,HDMI,,1080p60,AVC,135000,NA,constant,basic,60,0,NV12,normal,high,NA,4,21600,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5,NA,5
+414,L1_414,maxbitrate,HDMI,,1080p60,AVC,240000,NA,constant,basic,60,4,NV12,normal,high,NA,4,21600,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5.1,NA,5
+415,L1_415,maxbitrate,HDMI,,1080p60,HEVC,20000,NA,constant,basic,60,0,NV12,normal,main,NA,4,21600,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,4.1,main,5
+416,L1_416,maxbitrate,HDMI,,1080p60,HEVC,100000,NA,constant,basic,60,4,NV12,normal,main,NA,4,21600,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5,high,5
+417,L1_417,maxbitrate,HDMI,,1080p60,HEVC,160000,NA,constant,basic,60,0,NV12,normal,main,NA,4,21600,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,5.1,high,5
+418,L1_418,maxbitrate,HDMI,,1080p30,AVC,20000,NA,constant,basic,30,4,NV12,normal,high,NA,4,10800,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,4,NA,5
+419,L1_419,maxbitrate,HDMI,,1080p30,AVC,50000,NA,constant,basic,30,0,NV12,normal,high,NA,4,10800,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,4.1,NA,5
+420,L1_420,maxbitrate,HDMI,,1080p30,AVC,50000,NA,constant,basic,30,4,NV12,normal,high,NA,4,10800,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,4.2,NA,5
+421,L1_421,maxbitrate,HDMI,,1080p30,HEVC,12000,NA,constant,basic,30,0,NV12,normal,main,NA,4,10800,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,4,main,5
+422,L1_422,maxbitrate,HDMI,,1080p30,HEVC,50000,NA,constant,basic,30,4,NV12,normal,main,NA,4,10800,TRUE,serial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,4.1,high,5

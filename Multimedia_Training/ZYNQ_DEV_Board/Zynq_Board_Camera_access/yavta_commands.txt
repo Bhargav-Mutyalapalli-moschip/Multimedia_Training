@@ -1,0 +1,206 @@
+yavta -l --enum-formats --enum-inputs /dev/video7
+
+yavta -F /dev/video0 --capture=10
+
+yavta -n 3 -c10 -f NV12 -s 1920x1080 --skip 7 -F /dev/video7 (capture 3 pictures)
+
+yavta --help
+Usage: yavta [options] device
+Supported options:
+-c, --capture[=nframes]         Capture frames
+-C, --check-overrun             Verify dequeued frames for buffer overrun
+-d, --delay                     Delay (in ms) before requeuing buffers
+-D, --display                   Display frames
+-f, --format format             Set the video format
+-F, --file[=name]               Read/write frames from/to disk
+        For video capture devices, the first '#' character in the file name is
+        expanded to the frame sequence number. The default file name is
+        'frame-#.bin'.
+-h, --help                      Show this help screen
+-i, --input input               Select the video input
+-I, --fill-frames               Fill frames with check pattern before queuing them
+-l, --list-controls             List available controls
+-n, --nbufs n                   Set the number of video buffers
+-p, --pause                     Pause before starting the video stream
+-q, --quality n                 MJPEG quality (0-100)
+-r, --get-control ctrl          Get control 'ctrl'
+-R, --realtime=[priority]       Enable realtime RR scheduling
+-s, --size WxH                  Set the frame size
+-t, --time-per-frame num/denom  Set the time per frame (eg. 1/25 = 25 fps)
+-u, --userptr                   Use the user pointers streaming method
+-w, --set-control 'ctrl value'  Set control 'ctrl' to 'value'
+    --enum-formats              Enumerate formats
+    --enum-inputs               Enumerate inputs
+    --no-query                  Don't query capabilities on open
+    --offset                    User pointer buffer offset from page start
+    --requeue-last              Requeue the last buffers before streamoff
+    --skip n                    Skip the first n frames
+    --sleep-forever             Sleep forever after configuring the device
+    --stride value              Line stride in bytes
+3 Examples↑
+
+
+Getting supported controls/formats/resolutions:
+yavta -l --enum-formats --enum-inputs /dev/video0
+Device /dev/video0 opened.
+Device `STM32 Camera Memory Interface' on `platform:dcmi' is a video capture device.
+--- Image Processing Controls (class 0x009f0001) ---
+control 0x009f0903 `Test Pattern' min 0 max 1 step 1 default 0 current 1.
+1 control found.
+- Available formats:
+        Format 0: RGB565 (50424752)
+        Type: Video capture (1)
+        Name: 16-bit RGB 5-6-5
+        Frame size: 640x480 ()
+        Frame size: 320x240 ()
+        Frame size: 160x120 ()
+
+- Available inputs:
+        Input 0: Camera.
+
+Video format: RGB565 (50424752) 160x120 (stride 320) buffer size 38400
+
+
+Capturing 10 frames on the disk (default format/resolution):
+yavta -F /dev/video0 --capture=10
+/usr/sbin # yavta -F /dev/video0 --capture=10
+Device /dev/video0 opened.
+Device `STM32 Camera Memory Interface' on `platform:dcmi' is a video capture device.
+Video format: RGB565 (50424752) 160x120 (stride 320) buffer size 38400
+8 buffers requested.
+length: 38400 offset: 0
+Buffer 0 mapped at address 0xc0710000.
+length: 38400 offset: 40960
+Buffer 1 mapped at address 0xc0720000.
+length: 38400 offset: 81920
+Buffer 2 mapped at address 0xc0730000.
+length: 38400 offset: 122880
+Buffer 3 mapped at address 0xc0740000.
+length: 38400 offset: 163840
+Buffer 4 mapped at address 0xc0750000.
+length: 38400 offset: 204800
+Buffer 5 mapped at address 0xc0760000.
+length: 38400 offset: 245760
+Buffer 6 mapped at address 0xc0770000.
+length: 38400 offset: 286720
+Buffer 7 mapped at address 0xc0780000.
+0 (0) [-] 0 38400 bytes 1378.374325 1378.374535 17.819 fps
+1 (1) [-] 1 38400 bytes 1378.407623 1378.407822 30.032 fps
+2 (2) [-] 2 38400 bytes 1378.440939 1378.441111 30.016 fps
+3 (3) [-] 3 38400 bytes 1378.474288 1378.474450 29.986 fps
+4 (4) [-] 4 38400 bytes 1378.507624 1378.507827 29.998 fps
+5 (5) [-] 5 38400 bytes 1378.540989 1378.541196 29.972 fps
+6 (6) [-] 6 38400 bytes 1378.574288 1378.574489 30.031 fps
+7 (7) [-] 7 38400 bytes 1378.607624 1378.607827 29.998 fps
+8 (0) [-] 8 38400 bytes 1378.640959 1378.641162 29.999 fps
+9 (1) [-] 9 38400 bytes 1378.674288 1378.674488 30.004 fps
+Captured 10 frames in 0.356282 seconds (28.067590 fps, 1077795.461669 B/s).
+
+
+
+
+
+NAME
+yavta - Yet Another V4L2 Test Application
+
+SYNOPSIS
+yavta [options] device
+
+DESCRIPTION
+Supported options: -B, --buffer-type Buffer type ("capture", "output",
+
+"capture-mplane" or "output-mplane")
+-c, --capture[=nframes] Capture frames -C, --check-overrun Verify dequeued frames for buffer overrun -d, --delay Delay (in ms) before requeuing buffers -f, --format format Set the video format
+
+use -f help to list the supported formats
+-F, --file[=name] Read/write frames from/to disk
+
+For video capture devices, the first '#' character in the file name is expanded to the frame sequence number. The default file name is 'frame-#.bin'.
+-h, --help Show this help screen -i, --input input Select the video input -I, --fill-frames Fill frames with check pattern before queuing them -l, --list-controls List available controls -n, --nbufs n Set the number of video buffers -p, --pause[=n] Pause after n frames (0 if n isn't specified) -q, --quality n MJPEG quality (0-100) -r, --get-control ctrl Get control 'ctrl' -R, --realtime=[priority] Enable realtime RR scheduling -s, --size WxH Set the frame size -t, --time-per-frame num/denom Set the time per frame (eg. 1/25 = 25 fps) -u, --userptr Use the user pointers streaming method -w, --set-control 'ctrl value' Set control 'ctrl' to 'value'
+
+--buffer-prefix
+Write portions of buffer before data_offset
+--buffer-size
+Buffer size in bytes
+--enum-formats
+Enumerate formats
+--enum-inputs
+Enumerate inputs
+--fd
+Use a numeric file descriptor insted of a device
+--field field
+Set the format field order
+Valid values for field are none, top, bottom, interlaced, seq-tb, seq-bt, alternate, interlaced-tb and interlaced-bt.
+--log-status
+Log device status
+--no-query
+Don't query capabilities on open
+--offset
+User pointer buffer offset from page start
+--premultiplied
+Color components are premultiplied by alpha value
+--queue-late
+Queue buffers after streamon, not before
+--requeue-last
+Requeue the last buffers before streamoff
+--reset-controls
+Reset all available controls to their default value
+--timestamp-source
+Set timestamp source on output buffers [eof, soe]
+--skip n
+Skip the first n frames
+--sleep-forever
+Sleep forever after configuring the device
+--stride value
+Line stride in bytes
+
+
+
+// Choose a format and dimensions, then use yavta to capture and dump some frames
+# yavta -f RGB565 -s 640x480 -n 4 --capture=5 -F /dev/video0
+
+// This command will capture 5 frames (--capture=5) using 4 buffers (-n 4) with a
+// size of 640x480 (-s 640x480) in the rgb565 little endian format (-f RGB565),
+// then it will dump them to files (-F) named frame-00000x.bin
+
+
+// Change the file extensions to indicate the format (required for conversion by ffmpeg)
+# mv frame-000001.{bin,rgb}
+
+// To display the raw 16-bit rgb files, I convert them to the png format using ffmpeg
+# ffmpeg -s 640x480 -pix_fmt rgb565le -i frame-000001.rgb -f image2 -pix_fmt rgb24 frame1.png
+
+
+//captures the frames 
+yavta /dev/video0 -B capture-mplane -c10 -n 5 -f SGRBG10P -s 2104x1560 -F ~/Desktop/video.raw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+media-ctl -d /dev/media0 -V "\"IMX274 3-001a\":0 [fmt:SRGGB8_1X8/1920x1080@1/30 field:none]"
+media-ctl -d /dev/media0 -V "\"a00f0000.mipi_csi2_rx_subsystem\":0 [fmt:SRGGB8_1X8/1920x1080 field:none]"
+media-ctl -d /dev/media0 -V "\"a0250000.v_demosaic\":0 [fmt:SRGGB8_1X8/1920x1080 field:none]"
+media-ctl -d /dev/media0 -V "\"a0250000.v_demosaic\":1 [fmt:RBG24/1920x1080 field:none]"
+media-ctl -d /dev/media0 -V "\"a0270000.v_gamma_lut\":0 [fmt:RBG24/1920x1080 field:none]"
+media-ctl -d /dev/media0 -V "\"a0270000.v_gamma_lut\":1 [fmt:RBG24/1920x1080 field:none]"
+media-ctl -d /dev/media0 -V "\"a0240000.v_proc_ss\":0 [fmt:RBG24/1920x1080 field:none]"
+media-ctl -d /dev/media0 -V "\"a0240000.v_proc_ss\":1 [fmt:RBG24/1920x1080 field:none]"
+media-ctl -d /dev/media0 -V "\"a0200000.v_proc_ss\":0 [fmt:RBG24/1920x1080 field:none]"
+media-ctl -d /dev/media0 -V "\"a0200000.v_proc_ss\":1 [fmt:VYYUYY8_1X24/1920x1080 field:none]"
+ 
+yavta --no-query -w '0x0098c9c1 10' /dev/v4l-subdev3
+yavta --no-query -w '0x0098c9c2 10' /dev/v4l-subdev3
+yavta --no-query -w '0x0098c9c3 10' /dev/v4l-subdev3
+yavta --no-query -w '0x0098c9a1 80' /dev/v4l-subdev4
+yavta --no-query -w '0x0098c9a2 55' /dev/v4l-subdev4
+yavta --no-query -w '0x0098c9a3 40' /dev/v4l-subdev4
+yavta --no-query -w '0x0098c9a4 24' /dev/v4l-subdev4
+yavta --no-query -w '0x0098c9a5 35' /dev/v4l-subdev4
+yavta --no-query -w '0x00980911 16636' /dev/v4l-subdev1
+yavta --no-query -w '0x00980913 5120' /dev/v4l-subdev1
+yavta --no-query -w '0x00980915 0' /dev/v4l-subdev1
+yavta --no-query -w '0x009f0903 0' /dev/v4l-subdev1

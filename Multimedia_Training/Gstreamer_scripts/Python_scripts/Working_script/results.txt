@@ -1,0 +1,14 @@
+Pipeline:gst-launch-1.0 videotestsrc ! video/x-raw,width=176,height=144,format=YV12 ! fakesink,Results is :Pass
+------------------------------------------------------------------------------------------------------------
+Pipeline:gst-launch-1.0 videotestsrc ! video/x-raw,width=640,height=480,format=YV12 ! fakesink,Results is :Pass
+------------------------------------------------------------------------------------------------------------
+Pipeline:gst-launch-1.0 videotestsrc ! video/x-raw,width=720,height=480,format=YV12 ! fakesink,Results is :Pass
+------------------------------------------------------------------------------------------------------------
+Pipeline:gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=YV12 ! fakesink,Results is :Pass
+------------------------------------------------------------------------------------------------------------
+Pipeline:gst-launch-1.0 videotestsrc ! video/x-raw,width=3840,height=2160,format=YV12 ! fakesink,Results is :Pass
+------------------------------------------------------------------------------------------------------------
+Pipeline:gst-launch-1.0 videotestsrc ! video/x-raw,width=7680,height=4320,format=YV12 ! fakesink,Results is :Pass
+------------------------------------------------------------------------------------------------------------
+Pipeline:gst-launch-1.0 videotestsrc ! video/x-raw,width=100,height=100,format=YV12 ! fakesink,Results is :Pass
+------------------------------------------------------------------------------------------------------------

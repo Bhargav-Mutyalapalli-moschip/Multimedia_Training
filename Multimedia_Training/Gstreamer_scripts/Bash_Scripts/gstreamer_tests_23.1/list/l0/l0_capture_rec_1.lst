@@ -1,0 +1,17 @@
+S.no,Testcase #,Test type,Source,Bitstream,Resolution&Fps,Codec,Target Bitrate,Max Bitrate,Control Rate,GOP Mode,GOP Length,B-Frames,Format,Latency Mode,Profile,QP Mode,Num Slices,Num buffers,Prefetch Buffer,Mode,Slice size,Dependent slice,CPB size,Initial delay,Min QP,Max QP,Quant-I-frames,Quant-P-frames,Quant-B-frames,Filler-data,Low-bandwidth,Periodicity-idr,GDR Mode,Entropy Mode,Intra-prediction,Loop-filter-mode,Scaling-list,Aspect-ratio,Level,Tier,Entropy-buffers
+120,L0_120,capture_enc_dec,MIPI,NA,4kp60,AVC,50000,NA,constant,basic,60,0,NV12,NA,high,auto,8,3600,TRUE,NA,NA,NA,2800,1400,5,50,25,NA,NA,TRUE,0,NA,NA,CABAC,TRUE,enable,default,0,NA,NA,9
+121,L0_121,capture_enc_dec,MIPI,NA,4kp60,AVC,50000,NA,constant,low-delay-p,120,NA,NV12,normal,high,auto,8,3600,TRUE,NA,NA,NA,NA,1000,10,45,30,NA,NA,NA,1,NA,NA,CAVLC,FALSE,default,flat,1,NA,NA,9
+122,L0_122,capture_enc_dec,MIPI,NA,4kp60,AVC,40000,NA,variable,basic,120,0,NV12,NA,high,uniform,8,3600,TRUE,NA,NA,NA,3500,NA,2,30,20,20,NA,NA,0,NA,NA,CABAC,TRUE,enable,default,2,NA,NA,9
+123,L0_123,capture_enc_dec,HDMI,NA,4kp60,HEVC,60000,NA,constant,basic,30,0,NV12,NA,main,uniform,8,3600,TRUE,NA,NA,NA,3000,1500,0,25,15,30,NA,FALSE,1,NA,NA,NA,FALSE,disable-cross-slice,flat,3,NA,NA,9
+124,L0_124,capture_enc_dec,HDMI,NA,4kp60,HEVC,100000,NA,variable,basic,60,0,NV12,normal,main,auto,8,3600,TRUE,NA,NA,NA,3500,1700,5,30,10,15,NA,NA,0,NA,NA,NA,TRUE,enable,default,0,NA,NA,9
+125,L0_125,capture_enc_dec,HDMI,NA,4kp60,HEVC,40000,NA,variable,low-delay-p,60,NA,NV12,NA,main,auto,8,3600,TRUE,NA,NA,NA,2800,1400,10,40,25,NA,NA,NA,1,NA,NA,NA,FALSE,disable,flat,1,NA,NA,9
+126,L0_126,capture_enc_dec,HDMI,NA,4kp30,AVC,50000,NA,constant,basic,30,0,NV12,NA,high,uniform,4,1800,TRUE,NA,NA,NA,3500,NA,15,50,30,15,30,TRUE,0,NA,NA,CAVLC,TRUE,disable,default,2,NA,NA,5
+127,L0_127,capture_enc_dec,HDMI,NA,4kp30,AVC,50000,NA,constant,low-delay-p,40,NA,NV12,normal,high,uniform,4,1800,TRUE,NA,NA,NA,2000,1000,2,40,30,20,NA,NA,1,NA,NA,CABAC,FALSE,disable-slice-boundary,flat,3,NA,NA,5
+128,L0_128,capture_enc_dec,HDMI,NA,4kp30,AVC,40000,NA,variable,basic,30,0,NV12,NA,high,auto,4,1800,TRUE,NA,NA,NA,2500,1200,10,35,20,15,20,NA,0,NA,NA,CAVLC,TRUE,default,default,0,NA,NA,5
+129,L0_129,capture_enc_dec,HDMI,NA,4kp30,HEVC,60000,NA,constant,basic,30,0,NV12,NA,main,auto,4,1800,TRUE,NA,NA,NA,NA,1000,5,50,25,NA,NA,FALSE,1,NA,NA,NA,FALSE,disable-cross-tile,flat,1,NA,NA,5
+130,L0_130,capture_enc_dec,HDMI,NA,4kp30,HEVC,40000,NA,variable,basic,60,0,NV12,normal,main,uniform,4,1800,TRUE,NA,NA,NA,3000,1500,20,40,22,NA,NA,NA,0,NA,NA,NA,TRUE,enable,default,2,NA,NA,5
+131,L0_131,capture_enc_dec,HDMI,NA,4kp30,HEVC,40000,NA,variable,low-delay-p,60,NA,NV12,NA,main,uniform,4,1800,TRUE,NA,NA,NA,3500,1700,0,25,10,15,NA,NA,1,NA,NA,NA,FALSE,disable-cross-slice,flat,3,NA,NA,5
+132,L0_132,capture_enc_dec,MIPI,NA,1080p60,AVC,50000,NA,constant,basic,60,0,NV12,NA,high,uniform,4,1800,TRUE,NA,NA,NA,2000,1000,2,40,30,30,10,NA,0,NA,NA,CABAC,TRUE,enable,default,0,NA,NA,5
+133,L0_133,capture_enc_dec,HDMI,NA,1080p60,HEVC,40000,NA,variable,pyramidal,60,5,NV12,NA,main,uniform,4,1800,TRUE,NA,NA,NA,2000,1000,2,40,30,30,10,NA,0,NA,NA,NA,TRUE,enable,default,0,NA,NA,5
+134,L0_134,capture_enc_dec,MIPI,NA,1080p30,HEVC,60000,NA,constant,basic,120,0,NV12,NA,main,uniform,4,1800,TRUE,NA,NA,NA,2000,1000,2,40,30,30,10,NA,0,NA,NA,NA,TRUE,enable,default,0,NA,NA,5
+135,L0_135,capture_enc_dec,HDMI,NA,1080p30,AVC,40000,NA,variable,pyramidal,40,7,NV12,NA,high,uniform,4,1800,TRUE,NA,NA,NA,2000,1000,2,40,30,30,10,NA,0,NA,NA,CABAC,TRUE,enable,default,0,NA,NA,5

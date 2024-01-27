@@ -1,0 +1,7 @@
+#S.no,Testcase #,Test type,Source,Bitstream,Resolution&Fps,Codec,Target Bitrate,Max Bitrate,Control Rate,GOP Mode,GOP Length,B-Frames,Format,Latency Mode,Profile,QP Mode,Num Slices,Num buffers,Prefetch Buffer,Mode,Display,Sample_Gst_Pipeline,Comments
+run_list+=" \
+1,L0_001,file_playback,File,Gran_Turismo_4Kp30.mp4,4kp30,AVC,60000,NA,constant,basic,NA,0,nv16,normal,baseline,NA,NA,3600,NA,repeat-file-play,DP
+2,L0_002,file_playback,File,Gran_Turismo_4Kp30.mp4,4kp30,AVC,60000,NA,constant,basic,NA,4,nv16,normal,main,NA,NA,3600,NA,loop-seek,DP
+3,L0_003,file_playback,File,Gran_Turismo_4Kp30.mp4,4kp30,HEVC,60000,NA,constant,basic,NA,4,nv16,normal,main,NA,NA,3600,NA,loop-playback,DP
+4,L0_004,file_playback,File,Gran_Turismo_4Kp30.mp4,4kp30,AVC,60000,NA,constant,basic,NA,4,nv16,normal,high,NA,NA,3600,NA,loop-play-eos,DP
+"

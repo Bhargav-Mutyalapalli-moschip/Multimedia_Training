@@ -1,0 +1,643 @@
+gst-launch-1.0 -v v4l2src device=/dev/video0 io-mode=4 num-buffers=3600 ! video/x-raw, width=1920, height=1080, format=NV12, framerate=30/1 ! omxh264enc target-bitrate=60000 control-rate=constant num-slices=60 gop-mode=basic-b gop-length=60 b-frames=4 qp-mode=auto prefetch-buffer=TRUE ! video/x-h264, profile=high, alignment=au ! queue ! omxh264dec low-latency=0 split-input=1 ! queue max-size-bytes=0 ! fpsdisplaysink name=fpssink text-overlay=false video-sink="kmssink bus-id="a0070000.v_mix" hold-extra-sample=TRUE fullscreen-overlay=1 sync=true" -v
+Setting pipeline to PAUSED ...
+Pipeline is live and does not need PREROLL ...
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: display-width = 1920
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: display-height = 1080
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: sync = true
+Pipeline is PREROLLED ...
+Setting pipeline to PLAYING ...
+New clock: GstSystemClock
+/GstPipeline:pipeline0/GstV4l2Src:v4l2src0.GstPad:src: caps = video/x-raw, width=(int)1920, height=(int)1080, format=(string)NV12, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt709
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter0.GstPad:src: caps = video/x-raw, width=(int)1920, height=(int)1080, format=(string)NV12, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt709
+Redistribute latency...
+/GstPipeline:pipeline0/GstOMXH264Enc-omxh264enc:omxh264enc-omxh264enc0.GstPad:sink: caps = video/x-raw, width=(int)1920, height=(int)1080, format=(string)NV12, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt709
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter0.GstPad:sink: caps = video/x-raw, width=(int)1920, height=(int)1080, format=(string)NV12, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt709
+[WARNING]: The specified Level is too low and will be adjusted
+[WARNING]: The specified CPBSize is higher than the Max CPBSize allowed for this level and will be adjusted
+[WARNING]: The specified InitialDelay is bigger than CPBSize and will be adjusted
+/GstPipeline:pipeline0/GstOMXH264Enc-omxh264enc:omxh264enc-omxh264enc0.GstPad:src: caps = video/x-h264, stream-format=(string)byte-stream, alignment=(string)au, profile=(string)high, level=(string)4.1, chroma-format=(string)4:2:0, bit-depth-luma=(uint)8, bit-depth-chroma=(uint)8, width=(int)1920, height=(int)1080, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt709
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter1.GstPad:src: caps = video/x-h264, stream-format=(string)byte-stream, alignment=(string)au, profile=(string)high, level=(string)4.1, chroma-format=(string)4:2:0, bit-depth-luma=(uint)8, bit-depth-chroma=(uint)8, width=(int)1920, height=(int)1080, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt709
+/GstPipeline:pipeline0/GstQueue:queue0.GstPad:sink: caps = video/x-h264, stream-format=(string)byte-stream, alignment=(string)au, profile=(string)high, level=(string)4.1, chroma-format=(string)4:2:0, bit-depth-luma=(uint)8, bit-depth-chroma=(uint)8, width=(int)1920, height=(int)1080, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt709
+/GstPipeline:pipeline0/GstQueue:queue0.GstPad:sink: caps = video/x-h264, stream-format=(string)byte-stream, alignment=(string)au, profile=(string)high, level=(string)4.1, chroma-format=(string)4:2:0, bit-depth-luma=(uint)8, bit-depth-chroma=(uint)8, width=(int)1920, height=(int)1080, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt709
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter1.GstPad:sink: caps = video/x-h264, stream-format=(string)byte-stream, alignment=(string)au, profile=(string)high, level=(string)4.1, chroma-format=(string)4:2:0, bit-depth-luma=(uint)8, bit-depth-chroma=(uint)8, width=(int)1920, height=(int)1080, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt709
+Redistribute latency...
+/GstPipeline:pipeline0/GstOMXH264Dec-omxh264dec:omxh264dec-omxh264dec0.GstPad:sink: caps = video/x-h264, stream-format=(string)byte-stream, alignment=(string)au, profile=(string)high, level=(string)4.1, chroma-format=(string)4:2:0, bit-depth-luma=(uint)8, bit-depth-chroma=(uint)8, width=(int)1920, height=(int)1080, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt709
+[WARNING] Filler data (134413) doesn't fit in the current buffer. Clip it to 122630 !
+/GstPipeline:pipeline0/GstOMXH264Dec-omxh264dec:omxh264dec-omxh264dec0.GstPad:src: caps = video/x-raw(memory:GLMemory), format=(string)RGBA, width=(int)1920, height=(int)1080, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, colorimetry=(string)2:1:5:1, framerate=(fraction)30/1
+/GstPipeline:pipeline0/GstOMXH264Dec-omxh264dec:omxh264dec-omxh264dec0.GstPad:src: caps = video/x-raw, format=(string)NV12, width=(int)1920, height=(int)1080, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)bt709, framerate=(fraction)30/1
+/GstPipeline:pipeline0/GstQueue:queue1.GstPad:sink: caps = video/x-raw, format=(string)NV12, width=(int)1920, height=(int)1080, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)bt709, framerate=(fraction)30/1
+/GstPipeline:pipeline0/GstQueue:queue1.GstPad:sink: caps = video/x-raw, format=(string)NV12, width=(int)1920, height=(int)1080, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)bt709, framerate=(fraction)30/1
+[WARNING] Filler data (246251) doesn't fit in the current buffer. Clip it to 124844 !
+[WARNING] Filler data (246641) doesn't fit in the current buffer. Clip it to 124736 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0.GstPad:sink: caps = video/x-raw, format=(string)NV12, width=(int)1920, height=(int)1080, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)bt709, framerate=(fraction)30/1
+[WARNING] Filler data (245723) doesn't fit in the current buffer. Clip it to 124601 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink.GstGhostPad:sink: caps = video/x-raw, format=(string)NV12, width=(int)1920, height=(int)1080, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)bt709, framerate=(fraction)30/1
+[WARNING] Filler data (234361) doesn't fit in the current buffer. Clip it to 124111 !
+[WARNING] Filler data (209992) doesn't fit in the current buffer. Clip it to 123605 !
+[WARNING] Filler data (167696) doesn't fit in the current buffer. Clip it to 122358 !
+[WARNING] Filler data (151494) doesn't fit in the current buffer. Clip it to 121976 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: sync = true
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 11, dropped: 1, fps: 20.67, drop rate: 1.88
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 26, dropped: 1, current: 30.00, average: 25.19
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 42, dropped: 1, current: 30.02, average: 26.83
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 57, dropped: 1, current: 30.00, average: 27.60
+[WARNING] Filler data (124196) doesn't fit in the current buffer. Clip it to 120414 !
+[WARNING] Filler data (122101) doesn't fit in the current buffer. Clip it to 120589 !
+[WARNING] Filler data (145328) doesn't fit in the current buffer. Clip it to 121309 !
+[WARNING] Filler data (158697) doesn't fit in the current buffer. Clip it to 121257 !
+[WARNING] Filler data (126741) doesn't fit in the current buffer. Clip it to 120714 !
+[WARNING] Filler data (134859) doesn't fit in the current buffer. Clip it to 121087 !
+[WARNING] Filler data (167283) doesn't fit in the current buffer. Clip it to 121576 !
+[WARNING] Filler data (153857) doesn't fit in the current buffer. Clip it to 121082 !
+[WARNING] Filler data (159498) doesn't fit in the current buffer. Clip it to 121197 !
+[WARNING] Filler data (174737) doesn't fit in the current buffer. Clip it to 121426 !
+[WARNING] Filler data (179881) doesn't fit in the current buffer. Clip it to 121825 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 73, dropped: 1, current: 30.00, average: 28.09
+[WARNING] Filler data (170014) doesn't fit in the current buffer. Clip it to 121649 !
+[WARNING] Filler data (169681) doesn't fit in the current buffer. Clip it to 121584 !
+[WARNING] Filler data (187871) doesn't fit in the current buffer. Clip it to 122964 !
+[WARNING] Filler data (152242) doesn't fit in the current buffer. Clip it to 121456 !
+[WARNING] Filler data (145758) doesn't fit in the current buffer. Clip it to 120964 !
+[WARNING] Filler data (149303) doesn't fit in the current buffer. Clip it to 120806 !
+[WARNING] Filler data (156951) doesn't fit in the current buffer. Clip it to 121480 !
+[WARNING] Filler data (170823) doesn't fit in the current buffer. Clip it to 121822 !
+[WARNING] Filler data (161555) doesn't fit in the current buffer. Clip it to 121359 !
+[WARNING] Filler data (164601) doesn't fit in the current buffer. Clip it to 121334 !
+[WARNING] Filler data (174753) doesn't fit in the current buffer. Clip it to 121829 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 88, dropped: 1, current: 30.00, average: 28.40
+[WARNING] Filler data (126575) doesn't fit in the current buffer. Clip it to 120193 !
+[WARNING] Filler data (122437) doesn't fit in the current buffer. Clip it to 119507 !
+[WARNING] Filler data (139423) doesn't fit in the current buffer. Clip it to 119233 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 103, dropped: 1, current: 30.00, average: 28.62
+[WARNING] Filler data (123754) doesn't fit in the current buffer. Clip it to 119806 !
+[WARNING] Filler data (121900) doesn't fit in the current buffer. Clip it to 120052 !
+[WARNING] Filler data (135091) doesn't fit in the current buffer. Clip it to 121188 !
+[WARNING] Filler data (129864) doesn't fit in the current buffer. Clip it to 120414 !
+[WARNING] Filler data (127148) doesn't fit in the current buffer. Clip it to 120789 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 118, dropped: 1, current: 30.00, average: 28.79
+[WARNING] Filler data (166007) doesn't fit in the current buffer. Clip it to 122159 !
+[WARNING] Filler data (155606) doesn't fit in the current buffer. Clip it to 121173 !
+[WARNING] Filler data (124108) doesn't fit in the current buffer. Clip it to 120341 !
+[WARNING] Filler data (146560) doesn't fit in the current buffer. Clip it to 120575 !
+[WARNING] Filler data (151949) doesn't fit in the current buffer. Clip it to 121368 !
+[WARNING] Filler data (122618) doesn't fit in the current buffer. Clip it to 120201 !
+[WARNING] Filler data (121784) doesn't fit in the current buffer. Clip it to 120253 !
+[WARNING] Filler data (143788) doesn't fit in the current buffer. Clip it to 121056 !
+[WARNING] Filler data (156368) doesn't fit in the current buffer. Clip it to 121368 !
+[WARNING] Filler data (125165) doesn't fit in the current buffer. Clip it to 120438 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 134, dropped: 1, current: 30.00, average: 28.93
+[WARNING] Filler data (125532) doesn't fit in the current buffer. Clip it to 120497 !
+[WARNING] Filler data (149832) doesn't fit in the current buffer. Clip it to 121173 !
+[WARNING] Filler data (153801) doesn't fit in the current buffer. Clip it to 120999 !
+[WARNING] Filler data (135424) doesn't fit in the current buffer. Clip it to 120611 !
+[WARNING] Filler data (133677) doesn't fit in the current buffer. Clip it to 120604 !
+[WARNING] Filler data (143710) doesn't fit in the current buffer. Clip it to 120792 !
+[WARNING] Filler data (160004) doesn't fit in the current buffer. Clip it to 121617 !
+[WARNING] Filler data (146525) doesn't fit in the current buffer. Clip it to 120881 !
+[WARNING] Filler data (138917) doesn't fit in the current buffer. Clip it to 120884 !
+[WARNING] Filler data (143889) doesn't fit in the current buffer. Clip it to 121236 !
+[WARNING] Filler data (158388) doesn't fit in the current buffer. Clip it to 121333 !
+[WARNING] Filler data (144197) doesn't fit in the current buffer. Clip it to 121023 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 149, dropped: 1, current: 29.99, average: 29.03
+[WARNING] Filler data (142734) doesn't fit in the current buffer. Clip it to 121085 !
+[WARNING] Filler data (159660) doesn't fit in the current buffer. Clip it to 121553 !
+[WARNING] Filler data (155049) doesn't fit in the current buffer. Clip it to 121279 !
+[WARNING] Filler data (140444) doesn't fit in the current buffer. Clip it to 120856 !
+[WARNING] Filler data (139997) doesn't fit in the current buffer. Clip it to 120860 !
+[WARNING] Filler data (150719) doesn't fit in the current buffer. Clip it to 121144 !
+[WARNING] Filler data (158967) doesn't fit in the current buffer. Clip it to 121577 !
+[WARNING] Filler data (135594) doesn't fit in the current buffer. Clip it to 120464 !
+[WARNING] Filler data (131612) doesn't fit in the current buffer. Clip it to 120477 !
+[WARNING] Filler data (134229) doesn't fit in the current buffer. Clip it to 120439 !
+[WARNING] Filler data (137057) doesn't fit in the current buffer. Clip it to 120598 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 164, dropped: 1, current: 30.00, average: 29.12
+[WARNING] Filler data (138414) doesn't fit in the current buffer. Clip it to 120807 !
+[WARNING] Filler data (165063) doesn't fit in the current buffer. Clip it to 121674 !
+[WARNING] Filler data (153582) doesn't fit in the current buffer. Clip it to 120970 !
+[WARNING] Filler data (141068) doesn't fit in the current buffer. Clip it to 120962 !
+[WARNING] Filler data (137986) doesn't fit in the current buffer. Clip it to 120774 !
+[WARNING] Filler data (140550) doesn't fit in the current buffer. Clip it to 120654 !
+[WARNING] Filler data (152472) doesn't fit in the current buffer. Clip it to 121488 !
+[WARNING] Filler data (203306) doesn't fit in the current buffer. Clip it to 122846 !
+[WARNING] Filler data (179001) doesn't fit in the current buffer. Clip it to 121785 !
+[WARNING] Filler data (165001) doesn't fit in the current buffer. Clip it to 121525 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 180, dropped: 1, current: 30.00, average: 29.20
+[WARNING] Filler data (175045) doesn't fit in the current buffer. Clip it to 122313 !
+[WARNING] Filler data (162160) doesn't fit in the current buffer. Clip it to 121245 !
+[WARNING] Filler data (151620) doesn't fit in the current buffer. Clip it to 121034 !
+[WARNING] Filler data (148844) doesn't fit in the current buffer. Clip it to 120978 !
+[WARNING] Filler data (159297) doesn't fit in the current buffer. Clip it to 121637 !
+[WARNING] Filler data (171732) doesn't fit in the current buffer. Clip it to 122007 !
+[WARNING] Filler data (153094) doesn't fit in the current buffer. Clip it to 121092 !
+[WARNING] Filler data (147159) doesn't fit in the current buffer. Clip it to 120987 !
+[WARNING] Filler data (154599) doesn't fit in the current buffer. Clip it to 121105 !
+[WARNING] Filler data (161026) doesn't fit in the current buffer. Clip it to 121317 !
+[WARNING] Filler data (140777) doesn't fit in the current buffer. Clip it to 121025 !
+[WARNING] Filler data (144481) doesn't fit in the current buffer. Clip it to 120771 !
+[WARNING] Filler data (168370) doesn't fit in the current buffer. Clip it to 121480 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 196, dropped: 1, current: 29.98, average: 29.26
+[WARNING] Filler data (158258) doesn't fit in the current buffer. Clip it to 121624 !
+[WARNING] Filler data (145847) doesn't fit in the current buffer. Clip it to 120913 !
+[WARNING] Filler data (144050) doesn't fit in the current buffer. Clip it to 120924 !
+[WARNING] Filler data (159655) doesn't fit in the current buffer. Clip it to 121925 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 212, dropped: 1, current: 30.02, average: 29.31
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 227, dropped: 1, current: 30.00, average: 29.36
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 242, dropped: 1, current: 30.00, average: 29.40
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 258, dropped: 1, current: 30.00, average: 29.43
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 274, dropped: 1, current: 30.01, average: 29.47
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 290, dropped: 1, current: 30.00, average: 29.50
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 305, dropped: 1, current: 30.00, average: 29.52
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 321, dropped: 1, current: 29.98, average: 29.54
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 337, dropped: 1, current: 30.02, average: 29.56
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 352, dropped: 1, current: 30.00, average: 29.58
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 368, dropped: 1, current: 30.00, average: 29.60
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 384, dropped: 1, current: 30.00, average: 29.62
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 399, dropped: 1, current: 30.00, average: 29.63
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 414, dropped: 1, current: 29.99, average: 29.64
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 430, dropped: 1, current: 30.00, average: 29.66
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 445, dropped: 1, current: 30.00, average: 29.67
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 461, dropped: 1, current: 29.98, average: 29.68
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 477, dropped: 1, current: 30.02, average: 29.69
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 493, dropped: 1, current: 30.00, average: 29.70
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 508, dropped: 1, current: 30.00, average: 29.71
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 523, dropped: 1, current: 30.00, average: 29.72
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 539, dropped: 1, current: 30.00, average: 29.73
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 554, dropped: 1, current: 30.00, average: 29.73
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 570, dropped: 1, current: 30.00, average: 29.74
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 585, dropped: 1, current: 30.00, average: 29.75
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 600, dropped: 1, current: 30.00, average: 29.75
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 616, dropped: 1, current: 29.98, average: 29.76
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 631, dropped: 1, current: 30.00, average: 29.77
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 646, dropped: 1, current: 29.99, average: 29.77
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 662, dropped: 1, current: 30.02, average: 29.78
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 678, dropped: 1, current: 30.00, average: 29.78
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 694, dropped: 1, current: 30.01, average: 29.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 710, dropped: 1, current: 30.00, average: 29.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 725, dropped: 1, current: 30.00, average: 29.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 741, dropped: 1, current: 29.98, average: 29.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 756, dropped: 1, current: 30.00, average: 29.80
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 771, dropped: 1, current: 30.00, average: 29.81
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 786, dropped: 1, current: 30.00, average: 29.81
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 802, dropped: 1, current: 30.02, average: 29.82
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 818, dropped: 1, current: 30.00, average: 29.82
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 834, dropped: 1, current: 30.00, average: 29.82
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 850, dropped: 1, current: 30.01, average: 29.83
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 865, dropped: 1, current: 30.00, average: 29.83
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 881, dropped: 1, current: 29.96, average: 29.83
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 897, dropped: 1, current: 30.04, average: 29.84
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 913, dropped: 1, current: 30.00, average: 29.84
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 928, dropped: 1, current: 30.00, average: 29.84
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 944, dropped: 1, current: 30.00, average: 29.84
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 959, dropped: 1, current: 30.00, average: 29.85
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 974, dropped: 1, current: 30.00, average: 29.85
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 990, dropped: 1, current: 30.00, average: 29.85
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1005, dropped: 1, current: 30.00, average: 29.85
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1021, dropped: 1, current: 29.99, average: 29.85
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1036, dropped: 1, current: 30.00, average: 29.86
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1051, dropped: 1, current: 30.00, average: 29.86
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1067, dropped: 1, current: 30.02, average: 29.86
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1083, dropped: 1, current: 30.00, average: 29.86
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1099, dropped: 1, current: 30.00, average: 29.87
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1114, dropped: 1, current: 30.00, average: 29.87
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1130, dropped: 1, current: 30.00, average: 29.87
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1145, dropped: 1, current: 30.00, average: 29.87
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1160, dropped: 1, current: 30.00, average: 29.87
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1175, dropped: 1, current: 30.00, average: 29.87
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1191, dropped: 1, current: 29.99, average: 29.88
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1206, dropped: 1, current: 30.00, average: 29.88
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1222, dropped: 1, current: 30.02, average: 29.88
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1237, dropped: 1, current: 30.00, average: 29.88
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1253, dropped: 1, current: 30.00, average: 29.88
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1268, dropped: 1, current: 30.00, average: 29.88
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1284, dropped: 1, current: 30.00, average: 29.88
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1300, dropped: 1, current: 30.00, average: 29.89
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1315, dropped: 1, current: 30.00, average: 29.89
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1330, dropped: 1, current: 30.00, average: 29.89
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1345, dropped: 1, current: 30.00, average: 29.89
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1360, dropped: 1, current: 30.00, average: 29.89
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1376, dropped: 1, current: 29.99, average: 29.89
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1392, dropped: 1, current: 30.02, average: 29.89
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1407, dropped: 1, current: 30.00, average: 29.89
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1423, dropped: 1, current: 30.00, average: 29.90
+[WARNING] Filler data (134913) doesn't fit in the current buffer. Clip it to 121930 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1438, dropped: 1, current: 29.98, average: 29.90
+[WARNING] Filler data (124938) doesn't fit in the current buffer. Clip it to 121397 !
+[WARNING] Filler data (133826) doesn't fit in the current buffer. Clip it to 121582 !
+[WARNING] Filler data (133220) doesn't fit in the current buffer. Clip it to 121614 !
+[WARNING] Filler data (122729) doesn't fit in the current buffer. Clip it to 121170 !
+[WARNING] Filler data (134436) doesn't fit in the current buffer. Clip it to 121818 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1454, dropped: 1, current: 30.00, average: 29.90
+[WARNING] Filler data (131910) doesn't fit in the current buffer. Clip it to 121360 !
+[WARNING] Filler data (122500) doesn't fit in the current buffer. Clip it to 121675 !
+[WARNING] Filler data (135543) doesn't fit in the current buffer. Clip it to 121702 !
+[WARNING] Filler data (127300) doesn't fit in the current buffer. Clip it to 121256 !
+[WARNING] Filler data (141805) doesn't fit in the current buffer. Clip it to 121335 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1470, dropped: 1, current: 30.02, average: 29.90
+[WARNING] Filler data (134131) doesn't fit in the current buffer. Clip it to 121839 !
+[WARNING] Filler data (141860) doesn't fit in the current buffer. Clip it to 121946 !
+[WARNING] Filler data (130527) doesn't fit in the current buffer. Clip it to 121686 !
+[WARNING] Filler data (139336) doesn't fit in the current buffer. Clip it to 122065 !
+[WARNING] Filler data (127260) doesn't fit in the current buffer. Clip it to 121454 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1485, dropped: 1, current: 29.98, average: 29.90
+[WARNING] Filler data (123685) doesn't fit in the current buffer. Clip it to 121442 !
+[WARNING] Filler data (140269) doesn't fit in the current buffer. Clip it to 121405 !
+[WARNING] Filler data (133480) doesn't fit in the current buffer. Clip it to 120956 !
+[WARNING] Filler data (131720) doesn't fit in the current buffer. Clip it to 121492 !
+[WARNING] Filler data (122065) doesn't fit in the current buffer. Clip it to 121429 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1501, dropped: 1, current: 29.98, average: 29.90
+[WARNING] Filler data (128669) doesn't fit in the current buffer. Clip it to 121351 !
+[WARNING] Filler data (129131) doesn't fit in the current buffer. Clip it to 121909 !
+[WARNING] Filler data (128813) doesn't fit in the current buffer. Clip it to 121788 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1517, dropped: 1, current: 30.03, average: 29.90
+[WARNING] Filler data (127436) doesn't fit in the current buffer. Clip it to 121805 !
+[WARNING] Filler data (128200) doesn't fit in the current buffer. Clip it to 121890 !
+[WARNING] Filler data (121928) doesn't fit in the current buffer. Clip it to 121402 !
+[WARNING] Filler data (125067) doesn't fit in the current buffer. Clip it to 121867 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1533, dropped: 1, current: 30.00, average: 29.90
+[WARNING] Filler data (130687) doesn't fit in the current buffer. Clip it to 121828 !
+[WARNING] Filler data (129045) doesn't fit in the current buffer. Clip it to 121494 !
+[WARNING] Filler data (126197) doesn't fit in the current buffer. Clip it to 122011 !
+[WARNING] Filler data (136422) doesn't fit in the current buffer. Clip it to 122523 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1549, dropped: 1, current: 30.00, average: 29.90
+[WARNING] Filler data (122330) doesn't fit in the current buffer. Clip it to 122246 !
+[WARNING] Filler data (130679) doesn't fit in the current buffer. Clip it to 122126 !
+[WARNING] Filler data (124927) doesn't fit in the current buffer. Clip it to 122412 !
+[WARNING] Filler data (132413) doesn't fit in the current buffer. Clip it to 122436 !
+[WARNING] Filler data (122884) doesn't fit in the current buffer. Clip it to 121675 !
+[WARNING] Filler data (134305) doesn't fit in the current buffer. Clip it to 122303 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1564, dropped: 1, current: 30.00, average: 29.91
+[WARNING] Filler data (122878) doesn't fit in the current buffer. Clip it to 122121 !
+[WARNING] Filler data (131863) doesn't fit in the current buffer. Clip it to 122389 !
+[WARNING] Filler data (131506) doesn't fit in the current buffer. Clip it to 122301 !
+[WARNING] Filler data (128781) doesn't fit in the current buffer. Clip it to 122517 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1580, dropped: 1, current: 30.00, average: 29.91
+[WARNING] Filler data (127877) doesn't fit in the current buffer. Clip it to 122492 !
+[WARNING] Filler data (125493) doesn't fit in the current buffer. Clip it to 122082 !
+[WARNING] Filler data (123968) doesn't fit in the current buffer. Clip it to 121958 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1595, dropped: 1, current: 30.00, average: 29.91
+[WARNING] Filler data (124705) doesn't fit in the current buffer. Clip it to 122451 !
+[WARNING] Filler data (129900) doesn't fit in the current buffer. Clip it to 120979 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1610, dropped: 1, current: 30.00, average: 29.91
+[WARNING] Filler data (127744) doesn't fit in the current buffer. Clip it to 122584 !
+[WARNING] Filler data (127299) doesn't fit in the current buffer. Clip it to 122462 !
+[WARNING] Filler data (131759) doesn't fit in the current buffer. Clip it to 122421 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1626, dropped: 1, current: 29.96, average: 29.91
+[WARNING] Filler data (126278) doesn't fit in the current buffer. Clip it to 122648 !
+[WARNING] Filler data (137773) doesn't fit in the current buffer. Clip it to 122164 !
+[WARNING] Filler data (168075) doesn't fit in the current buffer. Clip it to 122877 !
+[WARNING] Filler data (173354) doesn't fit in the current buffer. Clip it to 122991 !
+[WARNING] Filler data (157741) doesn't fit in the current buffer. Clip it to 122539 !
+[WARNING] Filler data (151775) doesn't fit in the current buffer. Clip it to 122208 !
+[WARNING] Filler data (157682) doesn't fit in the current buffer. Clip it to 122627 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1642, dropped: 1, current: 30.04, average: 29.91
+[WARNING] Filler data (170889) doesn't fit in the current buffer. Clip it to 123628 !
+[WARNING] Filler data (161732) doesn't fit in the current buffer. Clip it to 123170 !
+[WARNING] Filler data (159999) doesn't fit in the current buffer. Clip it to 123040 !
+[WARNING] Filler data (171003) doesn't fit in the current buffer. Clip it to 123374 !
+[WARNING] Filler data (165407) doesn't fit in the current buffer. Clip it to 123635 !
+[WARNING] Filler data (146523) doesn't fit in the current buffer. Clip it to 122787 !
+[WARNING] Filler data (142820) doesn't fit in the current buffer. Clip it to 122336 !
+[WARNING] Filler data (154363) doesn't fit in the current buffer. Clip it to 123009 !
+[WARNING] Filler data (167800) doesn't fit in the current buffer. Clip it to 123124 !
+[WARNING] Filler data (148016) doesn't fit in the current buffer. Clip it to 122431 !
+[WARNING] Filler data (150256) doesn't fit in the current buffer. Clip it to 122815 !
+[WARNING] Filler data (163288) doesn't fit in the current buffer. Clip it to 123232 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1657, dropped: 1, current: 30.00, average: 29.91
+[WARNING] Filler data (166764) doesn't fit in the current buffer. Clip it to 122952 !
+[WARNING] Filler data (156320) doesn't fit in the current buffer. Clip it to 122687 !
+[WARNING] Filler data (154909) doesn't fit in the current buffer. Clip it to 122721 !
+[WARNING] Filler data (165845) doesn't fit in the current buffer. Clip it to 123072 !
+[WARNING] Filler data (163840) doesn't fit in the current buffer. Clip it to 123740 !
+[WARNING] Filler data (162485) doesn't fit in the current buffer. Clip it to 123129 !
+[WARNING] Filler data (163370) doesn't fit in the current buffer. Clip it to 123158 !
+[WARNING] Filler data (176197) doesn't fit in the current buffer. Clip it to 123677 !
+[WARNING] Filler data (177775) doesn't fit in the current buffer. Clip it to 123713 !
+[WARNING] Filler data (167703) doesn't fit in the current buffer. Clip it to 123635 !
+[WARNING] Filler data (165763) doesn't fit in the current buffer. Clip it to 123294 !
+[WARNING] Filler data (167980) doesn't fit in the current buffer. Clip it to 123623 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1673, dropped: 1, current: 30.00, average: 29.91
+[WARNING] Filler data (175528) doesn't fit in the current buffer. Clip it to 123385 !
+[WARNING] Filler data (160663) doesn't fit in the current buffer. Clip it to 122682 !
+[WARNING] Filler data (155558) doesn't fit in the current buffer. Clip it to 122529 !
+[WARNING] Filler data (160832) doesn't fit in the current buffer. Clip it to 122964 !
+[WARNING] Filler data (132801) doesn't fit in the current buffer. Clip it to 121998 !
+[WARNING] Filler data (140603) doesn't fit in the current buffer. Clip it to 122177 !
+[WARNING] Filler data (145587) doesn't fit in the current buffer. Clip it to 122427 !
+[WARNING] Filler data (170825) doesn't fit in the current buffer. Clip it to 123446 !
+[WARNING] Filler data (177400) doesn't fit in the current buffer. Clip it to 123229 !
+[WARNING] Filler data (156310) doesn't fit in the current buffer. Clip it to 122952 !
+[WARNING] Filler data (157629) doesn't fit in the current buffer. Clip it to 123250 !
+[WARNING] Filler data (163044) doesn't fit in the current buffer. Clip it to 123517 !
+[WARNING] Filler data (171696) doesn't fit in the current buffer. Clip it to 123678 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1688, dropped: 1, current: 30.00, average: 29.91
+[WARNING] Filler data (165143) doesn't fit in the current buffer. Clip it to 123524 !
+[WARNING] Filler data (163472) doesn't fit in the current buffer. Clip it to 123393 !
+[WARNING] Filler data (176961) doesn't fit in the current buffer. Clip it to 123731 !
+[WARNING] Filler data (185634) doesn't fit in the current buffer. Clip it to 123550 !
+[WARNING] Filler data (160579) doesn't fit in the current buffer. Clip it to 122916 !
+[WARNING] Filler data (157368) doesn't fit in the current buffer. Clip it to 122759 !
+[WARNING] Filler data (162265) doesn't fit in the current buffer. Clip it to 123033 !
+[WARNING] Filler data (165685) doesn't fit in the current buffer. Clip it to 122783 !
+[WARNING] Filler data (150595) doesn't fit in the current buffer. Clip it to 122302 !
+[WARNING] Filler data (148224) doesn't fit in the current buffer. Clip it to 122345 !
+[WARNING] Filler data (158904) doesn't fit in the current buffer. Clip it to 122851 !
+[WARNING] Filler data (169246) doesn't fit in the current buffer. Clip it to 122726 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1704, dropped: 1, current: 30.00, average: 29.91
+[WARNING] Filler data (152064) doesn't fit in the current buffer. Clip it to 122355 !
+[WARNING] Filler data (151885) doesn't fit in the current buffer. Clip it to 122578 !
+[WARNING] Filler data (160827) doesn't fit in the current buffer. Clip it to 123137 !
+[WARNING] Filler data (168217) doesn't fit in the current buffer. Clip it to 123331 !
+[WARNING] Filler data (160335) doesn't fit in the current buffer. Clip it to 123393 !
+[WARNING] Filler data (163368) doesn't fit in the current buffer. Clip it to 123322 !
+[WARNING] Filler data (172250) doesn't fit in the current buffer. Clip it to 123370 !
+[WARNING] Filler data (171292) doesn't fit in the current buffer. Clip it to 123417 !
+[WARNING] Filler data (166506) doesn't fit in the current buffer. Clip it to 122944 !
+[WARNING] Filler data (161887) doesn't fit in the current buffer. Clip it to 122715 !
+[WARNING] Filler data (166124) doesn't fit in the current buffer. Clip it to 122926 !
+[WARNING] Filler data (167287) doesn't fit in the current buffer. Clip it to 123076 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1719, dropped: 1, current: 30.00, average: 29.91
+[WARNING] Filler data (157299) doesn't fit in the current buffer. Clip it to 122751 !
+[WARNING] Filler data (157112) doesn't fit in the current buffer. Clip it to 122654 !
+[WARNING] Filler data (169062) doesn't fit in the current buffer. Clip it to 123100 !
+[WARNING] Filler data (153536) doesn't fit in the current buffer. Clip it to 123453 !
+[WARNING] Filler data (150406) doesn't fit in the current buffer. Clip it to 122534 !
+[WARNING] Filler data (152395) doesn't fit in the current buffer. Clip it to 122694 !
+[WARNING] Filler data (168900) doesn't fit in the current buffer. Clip it to 123150 !
+[WARNING] Filler data (187868) doesn't fit in the current buffer. Clip it to 123691 !
+[WARNING] Filler data (164069) doesn't fit in the current buffer. Clip it to 123293 !
+[WARNING] Filler data (161957) doesn't fit in the current buffer. Clip it to 123254 !
+[WARNING] Filler data (167273) doesn't fit in the current buffer. Clip it to 123403 !
+[WARNING] Filler data (170678) doesn't fit in the current buffer. Clip it to 123402 !
+[WARNING] Filler data (162172) doesn't fit in the current buffer. Clip it to 122655 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1734, dropped: 1, current: 29.98, average: 29.91
+[WARNING] Filler data (159210) doesn't fit in the current buffer. Clip it to 122524 !
+[WARNING] Filler data (167182) doesn't fit in the current buffer. Clip it to 122691 !
+[WARNING] Filler data (180200) doesn't fit in the current buffer. Clip it to 123436 !
+[WARNING] Filler data (166389) doesn't fit in the current buffer. Clip it to 122960 !
+[WARNING] Filler data (164043) doesn't fit in the current buffer. Clip it to 122950 !
+[WARNING] Filler data (172945) doesn't fit in the current buffer. Clip it to 123347 !
+[WARNING] Filler data (176061) doesn't fit in the current buffer. Clip it to 123404 !
+[WARNING] Filler data (158153) doesn't fit in the current buffer. Clip it to 122892 !
+[WARNING] Filler data (160475) doesn't fit in the current buffer. Clip it to 123054 !
+[WARNING] Filler data (167390) doesn't fit in the current buffer. Clip it to 123595 !
+[WARNING] Filler data (146733) doesn't fit in the current buffer. Clip it to 122595 !
+[WARNING] Filler data (146003) doesn't fit in the current buffer. Clip it to 122742 !
+[WARNING] Filler data (149735) doesn't fit in the current buffer. Clip it to 123009 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1750, dropped: 1, current: 30.02, average: 29.92
+[WARNING] Filler data (166582) doesn't fit in the current buffer. Clip it to 123559 !
+[WARNING] Filler data (164597) doesn't fit in the current buffer. Clip it to 123405 !
+[WARNING] Filler data (161772) doesn't fit in the current buffer. Clip it to 123464 !
+[WARNING] Filler data (164402) doesn't fit in the current buffer. Clip it to 123557 !
+[WARNING] Filler data (181269) doesn't fit in the current buffer. Clip it to 123976 !
+[WARNING] Filler data (173281) doesn't fit in the current buffer. Clip it to 123695 !
+[WARNING] Filler data (166273) doesn't fit in the current buffer. Clip it to 123591 !
+[WARNING] Filler data (164717) doesn't fit in the current buffer. Clip it to 123617 !
+[WARNING] Filler data (170269) doesn't fit in the current buffer. Clip it to 123653 !
+[WARNING] Filler data (174273) doesn't fit in the current buffer. Clip it to 123584 !
+[WARNING] Filler data (163738) doesn't fit in the current buffer. Clip it to 123354 !
+[WARNING] Filler data (164834) doesn't fit in the current buffer. Clip it to 123436 !
+[WARNING] Filler data (172947) doesn't fit in the current buffer. Clip it to 123701 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1766, dropped: 1, current: 29.96, average: 29.92
+[WARNING] Filler data (169035) doesn't fit in the current buffer. Clip it to 123583 !
+[WARNING] Filler data (159423) doesn't fit in the current buffer. Clip it to 123045 !
+[WARNING] Filler data (158099) doesn't fit in the current buffer. Clip it to 123252 !
+[WARNING] Filler data (167654) doesn't fit in the current buffer. Clip it to 123317 !
+[WARNING] Filler data (178835) doesn't fit in the current buffer. Clip it to 123424 !
+[WARNING] Filler data (162500) doesn't fit in the current buffer. Clip it to 123377 !
+[WARNING] Filler data (165963) doesn't fit in the current buffer. Clip it to 123556 !
+[WARNING] Filler data (176735) doesn't fit in the current buffer. Clip it to 123740 !
+[WARNING] Filler data (179582) doesn't fit in the current buffer. Clip it to 124037 !
+[WARNING] Filler data (171669) doesn't fit in the current buffer. Clip it to 123684 !
+[WARNING] Filler data (169214) doesn't fit in the current buffer. Clip it to 123574 !
+[WARNING] Filler data (176386) doesn't fit in the current buffer. Clip it to 123879 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1782, dropped: 1, current: 30.02, average: 29.92
+[WARNING] Filler data (154377) doesn't fit in the current buffer. Clip it to 123084 !
+[WARNING] Filler data (159305) doesn't fit in the current buffer. Clip it to 122722 !
+[WARNING] Filler data (161869) doesn't fit in the current buffer. Clip it to 122788 !
+[WARNING] Filler data (171238) doesn't fit in the current buffer. Clip it to 122972 !
+[WARNING] Filler data (123407) doesn't fit in the current buffer. Clip it to 121835 !
+[WARNING] Filler data (183185) doesn't fit in the current buffer. Clip it to 123787 !
+[WARNING] Filler data (172853) doesn't fit in the current buffer. Clip it to 123419 !
+[WARNING] Filler data (167285) doesn't fit in the current buffer. Clip it to 123042 !
+[WARNING] Filler data (174224) doesn't fit in the current buffer. Clip it to 123219 !
+[WARNING] Filler data (156580) doesn't fit in the current buffer. Clip it to 123584 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1798, dropped: 1, current: 30.02, average: 29.92
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1813, dropped: 1, current: 30.00, average: 29.92
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1828, dropped: 1, current: 30.00, average: 29.92
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1844, dropped: 1, current: 30.00, average: 29.92
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1860, dropped: 1, current: 30.00, average: 29.92
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1875, dropped: 1, current: 30.00, average: 29.92
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1890, dropped: 1, current: 30.00, average: 29.92
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1906, dropped: 1, current: 29.97, average: 29.92
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1922, dropped: 1, current: 30.03, average: 29.92
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1937, dropped: 1, current: 30.00, average: 29.92
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1952, dropped: 1, current: 30.00, average: 29.92
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1968, dropped: 1, current: 30.00, average: 29.92
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1983, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1998, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2013, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2029, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2045, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2060, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2076, dropped: 1, current: 29.99, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2091, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2107, dropped: 1, current: 30.02, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2122, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2138, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2153, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2169, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2185, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2201, dropped: 1, current: 29.98, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2217, dropped: 1, current: 30.02, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2232, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2248, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2263, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2279, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2294, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2310, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2325, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2340, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2356, dropped: 1, current: 29.99, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2371, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2386, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2402, dropped: 1, current: 30.02, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2417, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2432, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2447, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2463, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2478, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2493, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2509, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2524, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2540, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2555, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2571, dropped: 1, current: 29.99, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2587, dropped: 1, current: 30.02, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2602, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2617, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2633, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2649, dropped: 1, current: 30.00, average: 29.94
+[WARNING] Filler data (156106) doesn't fit in the current buffer. Clip it to 123721 !
+[WARNING] Filler data (156161) doesn't fit in the current buffer. Clip it to 122510 !
+[WARNING] Filler data (154245) doesn't fit in the current buffer. Clip it to 122372 !
+[WARNING] Filler data (183592) doesn't fit in the current buffer. Clip it to 122895 !
+[WARNING] Filler data (193727) doesn't fit in the current buffer. Clip it to 122880 !
+[WARNING] Filler data (177373) doesn't fit in the current buffer. Clip it to 122101 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2665, dropped: 1, current: 30.00, average: 29.94
+[WARNING] Filler data (179034) doesn't fit in the current buffer. Clip it to 122379 !
+[WARNING] Filler data (203160) doesn't fit in the current buffer. Clip it to 123902 !
+[WARNING] Filler data (210353) doesn't fit in the current buffer. Clip it to 124108 !
+[WARNING] Filler data (192380) doesn't fit in the current buffer. Clip it to 123304 !
+[WARNING] Filler data (185652) doesn't fit in the current buffer. Clip it to 123257 !
+[WARNING] Filler data (200408) doesn't fit in the current buffer. Clip it to 123721 !
+[WARNING] Filler data (197465) doesn't fit in the current buffer. Clip it to 123511 !
+[WARNING] Filler data (182173) doesn't fit in the current buffer. Clip it to 123021 !
+[WARNING] Filler data (180691) doesn't fit in the current buffer. Clip it to 122696 !
+[WARNING] Filler data (201928) doesn't fit in the current buffer. Clip it to 123019 !
+[WARNING] Filler data (144561) doesn't fit in the current buffer. Clip it to 121434 !
+[WARNING] Filler data (150707) doesn't fit in the current buffer. Clip it to 121541 !
+[WARNING] Filler data (165817) doesn't fit in the current buffer. Clip it to 122065 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2681, dropped: 1, current: 29.98, average: 29.94
+[WARNING] Filler data (186393) doesn't fit in the current buffer. Clip it to 123149 !
+[WARNING] Filler data (206244) doesn't fit in the current buffer. Clip it to 123647 !
+[WARNING] Filler data (184433) doesn't fit in the current buffer. Clip it to 122835 !
+[WARNING] Filler data (180283) doesn't fit in the current buffer. Clip it to 122624 !
+[WARNING] Filler data (193043) doesn't fit in the current buffer. Clip it to 123097 !
+[WARNING] Filler data (202738) doesn't fit in the current buffer. Clip it to 124124 !
+[WARNING] Filler data (186126) doesn't fit in the current buffer. Clip it to 123382 !
+[WARNING] Filler data (180449) doesn't fit in the current buffer. Clip it to 122817 !
+[WARNING] Filler data (189427) doesn't fit in the current buffer. Clip it to 122977 !
+[WARNING] Filler data (198305) doesn't fit in the current buffer. Clip it to 123081 !
+[WARNING] Filler data (168250) doesn't fit in the current buffer. Clip it to 121781 !
+[WARNING] Filler data (175778) doesn't fit in the current buffer. Clip it to 121846 !
+[WARNING] Filler data (187547) doesn't fit in the current buffer. Clip it to 122392 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2697, dropped: 1, current: 30.02, average: 29.94
+[WARNING] Filler data (195425) doesn't fit in the current buffer. Clip it to 123213 !
+[WARNING] Filler data (181481) doesn't fit in the current buffer. Clip it to 122721 !
+[WARNING] Filler data (182702) doesn't fit in the current buffer. Clip it to 122681 !
+[WARNING] Filler data (199965) doesn't fit in the current buffer. Clip it to 123389 !
+[WARNING] Filler data (198160) doesn't fit in the current buffer. Clip it to 123321 !
+[WARNING] Filler data (184537) doesn't fit in the current buffer. Clip it to 122457 !
+[WARNING] Filler data (181774) doesn't fit in the current buffer. Clip it to 122424 !
+[WARNING] Filler data (203798) doesn't fit in the current buffer. Clip it to 123393 !
+[WARNING] Filler data (130700) doesn't fit in the current buffer. Clip it to 121566 !
+[WARNING] Filler data (130281) doesn't fit in the current buffer. Clip it to 121623 !
+[WARNING] Filler data (131085) doesn't fit in the current buffer. Clip it to 121639 !
+[WARNING] Filler data (171936) doesn't fit in the current buffer. Clip it to 122669 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2712, dropped: 1, current: 30.00, average: 29.95
+[WARNING] Filler data (191439) doesn't fit in the current buffer. Clip it to 122960 !
+[WARNING] Filler data (175812) doesn't fit in the current buffer. Clip it to 122491 !
+[WARNING] Filler data (179450) doesn't fit in the current buffer. Clip it to 122209 !
+[WARNING] Filler data (193814) doesn't fit in the current buffer. Clip it to 122980 !
+[WARNING] Filler data (196701) doesn't fit in the current buffer. Clip it to 123422 !
+[WARNING] Filler data (172938) doesn't fit in the current buffer. Clip it to 122385 !
+[WARNING] Filler data (169960) doesn't fit in the current buffer. Clip it to 122291 !
+[WARNING] Filler data (184679) doesn't fit in the current buffer. Clip it to 122696 !
+[WARNING] Filler data (190006) doesn't fit in the current buffer. Clip it to 123740 !
+[WARNING] Filler data (169921) doesn't fit in the current buffer. Clip it to 122397 !
+[WARNING] Filler data (168734) doesn't fit in the current buffer. Clip it to 122128 !
+[WARNING] Filler data (183477) doesn't fit in the current buffer. Clip it to 122876 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2728, dropped: 1, current: 30.00, average: 29.95
+[WARNING] Filler data (187147) doesn't fit in the current buffer. Clip it to 123155 !
+[WARNING] Filler data (170971) doesn't fit in the current buffer. Clip it to 122423 !
+[WARNING] Filler data (166941) doesn't fit in the current buffer. Clip it to 122011 !
+[WARNING] Filler data (190233) doesn't fit in the current buffer. Clip it to 122424 !
+[WARNING] Filler data (191682) doesn't fit in the current buffer. Clip it to 122486 !
+[WARNING] Filler data (176348) doesn't fit in the current buffer. Clip it to 121998 !
+[WARNING] Filler data (181857) doesn't fit in the current buffer. Clip it to 122466 !
+[WARNING] Filler data (200008) doesn't fit in the current buffer. Clip it to 123046 !
+[WARNING] Filler data (199711) doesn't fit in the current buffer. Clip it to 122879 !
+[WARNING] Filler data (173256) doesn't fit in the current buffer. Clip it to 121871 !
+[WARNING] Filler data (142523) doesn't fit in the current buffer. Clip it to 121760 !
+[WARNING] Filler data (166198) doesn't fit in the current buffer. Clip it to 122850 !
+[WARNING] Filler data (197323) doesn't fit in the current buffer. Clip it to 123129 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2744, dropped: 1, current: 30.00, average: 29.95
+[WARNING] Filler data (184282) doesn't fit in the current buffer. Clip it to 122827 !
+[WARNING] Filler data (185685) doesn't fit in the current buffer. Clip it to 122451 !
+[WARNING] Filler data (196688) doesn't fit in the current buffer. Clip it to 123067 !
+[WARNING] Filler data (163849) doesn't fit in the current buffer. Clip it to 123245 !
+[WARNING] Filler data (176586) doesn't fit in the current buffer. Clip it to 122261 !
+[WARNING] Filler data (128433) doesn't fit in the current buffer. Clip it to 123473 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2759, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2775, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2791, dropped: 1, current: 29.99, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2806, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2822, dropped: 1, current: 30.02, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2837, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2853, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2869, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2885, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2900, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2915, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2931, dropped: 1, current: 29.99, average: 29.95
+[WARNING] Filler data (126062) doesn't fit in the current buffer. Clip it to 123899 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2946, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2962, dropped: 1, current: 30.02, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2977, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 2993, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3008, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3024, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3039, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3055, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3070, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3085, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3100, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3116, dropped: 1, current: 29.99, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3132, dropped: 1, current: 30.02, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3148, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3164, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3179, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3194, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3210, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3226, dropped: 1, current: 29.99, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3241, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3257, dropped: 1, current: 30.02, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3273, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3288, dropped: 1, current: 30.00, average: 29.95
+[WARNING] Filler data (133148) doesn't fit in the current buffer. Clip it to 121730 !
+[WARNING] Filler data (151678) doesn't fit in the current buffer. Clip it to 122047 !
+[WARNING] Filler data (164754) doesn't fit in the current buffer. Clip it to 122695 !
+[WARNING] Filler data (154187) doesn't fit in the current buffer. Clip it to 122650 !
+[WARNING] Filler data (139314) doesn't fit in the current buffer. Clip it to 122012 !
+[WARNING] Filler data (142665) doesn't fit in the current buffer. Clip it to 122536 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3304, dropped: 1, current: 30.00, average: 29.95
+[WARNING] Filler data (141231) doesn't fit in the current buffer. Clip it to 122368 !
+[WARNING] Filler data (138822) doesn't fit in the current buffer. Clip it to 121804 !
+[WARNING] Filler data (152071) doesn't fit in the current buffer. Clip it to 123237 !
+[WARNING] Filler data (159569) doesn't fit in the current buffer. Clip it to 122765 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3319, dropped: 1, current: 30.00, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3335, dropped: 1, current: 30.00, average: 29.96
+[WARNING] Filler data (132281) doesn't fit in the current buffer. Clip it to 121649 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3350, dropped: 1, current: 30.00, average: 29.96
+[WARNING] Filler data (138097) doesn't fit in the current buffer. Clip it to 122492 !
+[WARNING] Filler data (135527) doesn't fit in the current buffer. Clip it to 121570 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3366, dropped: 1, current: 29.99, average: 29.96
+[WARNING] Filler data (134023) doesn't fit in the current buffer. Clip it to 122410 !
+[WARNING] Filler data (133926) doesn't fit in the current buffer. Clip it to 122178 !
+[WARNING] Filler data (126794) doesn't fit in the current buffer. Clip it to 121764 !
+[WARNING] Filler data (123282) doesn't fit in the current buffer. Clip it to 121667 !
+[WARNING] Filler data (128844) doesn't fit in the current buffer. Clip it to 121127 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3382, dropped: 1, current: 30.02, average: 29.96
+[WARNING] Filler data (148071) doesn't fit in the current buffer. Clip it to 122317 !
+[WARNING] Filler data (129429) doesn't fit in the current buffer. Clip it to 121383 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3397, dropped: 1, current: 30.00, average: 29.96
+[WARNING] Filler data (137697) doesn't fit in the current buffer. Clip it to 120793 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3413, dropped: 1, current: 30.00, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3428, dropped: 1, current: 30.00, average: 29.96
+[WARNING] Filler data (140257) doesn't fit in the current buffer. Clip it to 121273 !
+[WARNING] Filler data (120933) doesn't fit in the current buffer. Clip it to 120105 !
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3444, dropped: 1, current: 30.00, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3459, dropped: 1, current: 30.00, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3474, dropped: 1, current: 30.00, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3490, dropped: 1, current: 30.00, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3505, dropped: 1, current: 30.00, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3521, dropped: 1, current: 29.98, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3536, dropped: 1, current: 30.00, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3552, dropped: 1, current: 30.02, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3567, dropped: 1, current: 30.00, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3582, dropped: 1, current: 30.00, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 3598, dropped: 1, current: 30.01, average: 29.96
+Got EOS from element "pipeline0".
+Execution ended after 0:02:00.772586862
+Setting pipeline to NULL ...
+Freeing pipeline ...

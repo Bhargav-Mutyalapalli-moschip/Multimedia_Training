@@ -1,0 +1,6 @@
+S.no,Testcase,Test type,Source,Bitstream,Resolution&Fps,Codec,Target Bitrate,Max Bitrate,Control Rate,GOP Mode,GOP Length,B-Frames,Format,Latency Mode,Profile,QP Mode,Num Slices,Num buffers,Prefetch Buffer,Mode,Sample_Gst_Pipeline,Comments
+run_list+="\
+117,L0_117,dynamic,File,FIFA_4Kp60_nv12.yuv,4kp60,avc,40000,NA,variable,basic,30,4,nv12,normal,NA,NA,NA,NA,NA,bitrate,,
+118,L0_118,dynamic,File,Football_4Kp30_XV20.yuv,4kp30,avc,60000,NA,constant,basic,30,4,xv20,normal,NA,NA,NA,NA,NA,gop,NA,NA
+119,L0_119,dynamic,File,FIFA_1080p60_nv12.yuv,1080p60,avc,20000,NA,2,0,30,0,23,nv12,normal,NA,NA,NA,NA,roi,0,high
+"

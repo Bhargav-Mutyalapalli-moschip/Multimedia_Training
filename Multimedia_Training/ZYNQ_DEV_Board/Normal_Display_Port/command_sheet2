@@ -1,0 +1,43 @@
+ 1  gst-launch-1.0 videotestsrc ! video/x-raw,width=640,height=480,format=NV12 ! croptech ! kmssink
+    2  gst-launch-1.0 videotestsrc ! video/x-raw,width=640,height=480,format=NV12 ! croptech ! kmssink
+    3  gst-launch-1.0 videotestsrc ! video/x-raw,width=640,height=480,format=NV12 ! croptech ! kmssink fullscreen-overlay=1
+    4  gst-launch-1.0 videotestsrc ! video/x-raw,width=640,height=480,format=NV12 ! croptech width=640 height=480 ! kmssink fullscreen-overlay=1
+    5  gst-launch-1.0 videotestsrc ! video/x-raw,width=640,height=480,format=NV12 ! croptech width=640 height=480 ! kmssink fullscreen-overlay=1
+    6  gst-launch-1.0 videotestsrc ! video/x-raw,width=640,height=480,format=NV12 ! croptech width=640 height=480 ! kmssink fullscreen-overlay=1
+    7  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=NV12 ! croptech width=640 height=480 ! kmssink fullscreen-overlay=1
+    8  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=NV12 ! kmssink fullscreen-overlay=1
+    9  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=BG24 ! kmssink fullscreen-overlay=1
+   10  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=BG24 ! kmssink 
+   11  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=RGB888 ! kmssink 
+   12  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=BRG888 ! kmssink 
+   13  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=BRG888 ! kmssink plan-id=41
+   14  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=BRG888 ! kmssink planid=41
+   15  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=BRG888 ! kmssink plane-id=41
+   16  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=RGB888 ! kmssink plane-id=41
+   17  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=RGBA888 ! kmssink plane-id=41
+   18  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=RGBA8880 ! kmssink plane-id=41
+   19  gst-inspect-1.0 videotestsrc | more
+   20  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=BGR ! kmssink plane-id=41
+   21  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=BGR ! kmssink plane-id=41
+   22  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=BGR ! kmssink 
+   23  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=BGR ! kmssink plane-id=41
+   24  gst-launch-1.0 videotestsrc ! video/x-raw,width=1920,height=1080,format=BGR ! kmssink plane-id=41 fullscreen-overlay=1
+   25  gst-inspect-1.0 videotestsrc | more
+   26  gst-launch-1.0 videotestsrc animation-mode=2 ! video/x-raw,width=1920,height=1080,format=BGR ! kmssink plane-id=41 fullscreen-overlay=1
+   27  gst-launch-1.0 videotestsrc animation-mode=2 ! video/x-raw,width=1920,height=1080,format=BGR ! kmssink plane-id=41 
+   28  gst-launch-1.0 videotestsrc animation-mode=2 ! video/x-raw,width=1920,height=1080,format=BGR ! kmssink plane-id=41 fullscreen-overlay=1
+   29  gst-launch-1.0 videotestsrc animation-mode=0 ! video/x-raw,width=1920,height=1080,format=BGR ! kmssink plane-id=41 fullscreen-overlay=1
+   30  gst-launch-1.0 videotestsrc animation-mode=0 pattern=ball ! video/x-raw,width=1920,height=1080,format=BGR ! kmssink plane-id=41 fullscreen-over
+lay=1
+   31  gst-launch-1.0 videotestsrc animation-mode=2 pattern=ball ! video/x-raw,width=1920,height=1080,format=BGR ! kmssink plane-id=41 fullscreen-over
+lay=1
+   32  gst-launch-1.0 videotestsrc animation-mode=2 pattern=clock ! video/x-raw,width=1920,height=1080,format=BGR ! kmssink plane-id=41 fullscreen-ove
+rlay=1
+   33  gst-inspect-1.0 videotestsrc | more
+   34  gst-launch-1.0 videotestsrc animation-mode=2 pattern=snow ! video/x-raw,width=1920,height=1080,format=BGR ! kmssink plane-id=41 fullscreen-over
+lay=1
+   35  gst-inspect-1.0 croptech
+   36  gst-inspect-1.0 croptech | more
+   37  history
+xilinx-zcu106-20232:/home/petalinux# 
+

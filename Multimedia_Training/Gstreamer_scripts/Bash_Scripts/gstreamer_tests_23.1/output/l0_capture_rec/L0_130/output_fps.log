@@ -1,0 +1,152 @@
+gst-launch-1.0 -v v4l2src device=/dev/video0 io-mode=5 num-buffers=1800 ! video/x-raw, width=3840, height=2160, format=NV12, framerate=30/1 ! omxh265enc target-bitrate=40000 max-bitrate=52000 control-rate=variable num-slices=4 gop-mode=basic gop-length=60 b-frames=0 qp-mode=uniform prefetch-buffer=TRUE cpb-size=3000 initial-delay=1500 min-qp=20 max-qp=40 quant-i-frames=22 low-bandwidth=0 constrained-intra-prediction=TRUE loop-filter-mode=enable scaling-list=default aspect-ratio=2 ! video/x-h265, profile=main, alignment=au ! queue ! omxh265dec low-latency=0 internal-entropy-buffers=5 ! queue max-size-bytes=0 ! fpsdisplaysink name=fpssink text-overlay=false video-sink="kmssink bus-id="a0070000.v_mix" hold-extra-sample=TRUE fullscreen-overlay=1 sync=true" -v
+Setting pipeline to PAUSED ...
+Pipeline is live and does not need PREROLL ...
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: display-width = 3840
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: display-height = 2160
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: sync = true
+Pipeline is PREROLLED ...
+Setting pipeline to PLAYING ...
+New clock: GstSystemClock
+/GstPipeline:pipeline0/GstV4l2Src:v4l2src0.GstPad:src: caps = video/x-raw, width=(int)3840, height=(int)2160, format=(string)NV12, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt2020
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter0.GstPad:src: caps = video/x-raw, width=(int)3840, height=(int)2160, format=(string)NV12, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt2020
+Redistribute latency...
+/GstPipeline:pipeline0/GstOMXH265Enc-omxh265enc:omxh265enc-omxh265enc0.GstPad:sink: caps = video/x-raw, width=(int)3840, height=(int)2160, format=(string)NV12, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt2020
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter0.GstPad:sink: caps = video/x-raw, width=(int)3840, height=(int)2160, format=(string)NV12, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt2020
+[WARNING]: The specified Level is too low and will be adjusted
+[WARNING]: The specified CPBSize is higher than the Max CPBSize allowed for this level and will be adjusted
+[WARNING]: The specified InitialDelay is bigger than CPBSize and will be adjusted
+/GstPipeline:pipeline0/GstOMXH265Enc-omxh265enc:omxh265enc-omxh265enc0.GstPad:src: caps = video/x-h265, stream-format=(string)byte-stream, alignment=(string)au, profile=(string)main, level=(string)5.2, tier=(string)main, chroma-format=(string)4:2:0, bit-depth-luma=(uint)8, bit-depth-chroma=(uint)8, width=(int)3840, height=(int)2160, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt2020
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter1.GstPad:src: caps = video/x-h265, stream-format=(string)byte-stream, alignment=(string)au, profile=(string)main, level=(string)5.2, tier=(string)main, chroma-format=(string)4:2:0, bit-depth-luma=(uint)8, bit-depth-chroma=(uint)8, width=(int)3840, height=(int)2160, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt2020
+/GstPipeline:pipeline0/GstQueue:queue0.GstPad:sink: caps = video/x-h265, stream-format=(string)byte-stream, alignment=(string)au, profile=(string)main, level=(string)5.2, tier=(string)main, chroma-format=(string)4:2:0, bit-depth-luma=(uint)8, bit-depth-chroma=(uint)8, width=(int)3840, height=(int)2160, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt2020
+/GstPipeline:pipeline0/GstQueue:queue0.GstPad:sink: caps = video/x-h265, stream-format=(string)byte-stream, alignment=(string)au, profile=(string)main, level=(string)5.2, tier=(string)main, chroma-format=(string)4:2:0, bit-depth-luma=(uint)8, bit-depth-chroma=(uint)8, width=(int)3840, height=(int)2160, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt2020
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter1.GstPad:sink: caps = video/x-h265, stream-format=(string)byte-stream, alignment=(string)au, profile=(string)main, level=(string)5.2, tier=(string)main, chroma-format=(string)4:2:0, bit-depth-luma=(uint)8, bit-depth-chroma=(uint)8, width=(int)3840, height=(int)2160, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt2020
+Redistribute latency...
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter1.GstPad:sink: caps = video/x-h265, stream-format=(string)byte-stream, alignment=(string)au, profile=(string)main, level=(string)5.2, tier=(string)main, chroma-format=(string)4:2:0, bit-depth-luma=(uint)8, bit-depth-chroma=(uint)8, width=(int)3840, height=(int)2160, pixel-aspect-ratio=(fraction)1/1, framerate=(fraction)30/1, interlace-mode=(string)progressive, colorimetry=(string)bt2020
+/GstPipeline:pipeline0/GstOMXH265Dec-omxh265dec:omxh265dec-omxh265dec0.GstPad:src: caps = video/x-raw(memory:GLMemory), format=(string)RGBA, width=(int)3840, height=(int)2160, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, colorimetry=(string)2:1:11:7, framerate=(fraction)30/1
+/GstPipeline:pipeline0/GstOMXH265Dec-omxh265dec:omxh265dec-omxh265dec0.GstPad:src: caps = video/x-raw, format=(string)NV12, width=(int)3840, height=(int)2160, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)bt2020, framerate=(fraction)30/1
+/GstPipeline:pipeline0/GstQueue:queue1.GstPad:sink: caps = video/x-raw, format=(string)NV12, width=(int)3840, height=(int)2160, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)bt2020, framerate=(fraction)30/1
+/GstPipeline:pipeline0/GstQueue:queue1.GstPad:src: caps = video/x-raw, format=(string)NV12, width=(int)3840, height=(int)2160, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)bt2020, framerate=(fraction)30/1
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink.GstGhostPad:sink.GstProxyPad:proxypad0: caps = video/x-raw, format=(string)NV12, width=(int)3840, height=(int)2160, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)bt2020, framerate=(fraction)30/1
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0.GstPad:sink: caps = video/x-raw, format=(string)NV12, width=(int)3840, height=(int)2160, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)bt2020, framerate=(fraction)30/1
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink.GstGhostPad:sink: caps = video/x-raw, format=(string)NV12, width=(int)3840, height=(int)2160, interlace-mode=(string)progressive, multiview-mode=(string)mono, multiview-flags=(GstVideoMultiviewFlagsSet)0:ffffffff:/right-view-first/left-flipped/left-flopped/right-flipped/right-flopped/half-aspect/mixed-mono, pixel-aspect-ratio=(fraction)1/1, chroma-site=(string)mpeg2, colorimetry=(string)bt2020, framerate=(fraction)30/1
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink/GstKMSSink:kmssink0: sync = true
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 15, dropped: 1, fps: 29.58, drop rate: 1.97
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 30, dropped: 1, current: 30.00, average: 29.79
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 45, dropped: 1, current: 30.00, average: 29.86
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 61, dropped: 1, current: 30.00, average: 29.90
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 77, dropped: 1, current: 30.00, average: 29.92
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 92, dropped: 1, current: 30.00, average: 29.93
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 108, dropped: 1, current: 30.00, average: 29.94
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 124, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 139, dropped: 1, current: 30.00, average: 29.95
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 155, dropped: 1, current: 30.00, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 170, dropped: 1, current: 30.00, average: 29.96
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 185, dropped: 1, current: 30.00, average: 29.97
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 200, dropped: 1, current: 30.00, average: 29.97
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 216, dropped: 1, current: 30.00, average: 29.97
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 231, dropped: 1, current: 30.00, average: 29.97
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 247, dropped: 1, current: 30.00, average: 29.97
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 263, dropped: 1, current: 30.00, average: 29.98
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 279, dropped: 1, current: 30.00, average: 29.98
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 294, dropped: 1, current: 30.00, average: 29.98
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 309, dropped: 1, current: 30.00, average: 29.98
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 325, dropped: 1, current: 30.00, average: 29.98
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 340, dropped: 1, current: 30.00, average: 29.98
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 356, dropped: 1, current: 30.00, average: 29.98
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 371, dropped: 1, current: 30.00, average: 29.98
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 387, dropped: 1, current: 30.00, average: 29.98
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 402, dropped: 1, current: 30.00, average: 29.98
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 418, dropped: 1, current: 30.00, average: 29.98
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 434, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 449, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 464, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 480, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 495, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 511, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 527, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 543, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 558, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 573, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 589, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 605, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 620, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 636, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 651, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 666, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 681, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 696, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 712, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 727, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 743, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 758, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 773, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 788, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 804, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 819, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 835, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 851, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 866, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 882, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 897, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 913, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 928, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 943, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 959, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 974, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 990, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1005, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1021, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1036, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1051, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1066, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1082, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1097, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1112, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1128, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1143, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1158, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1174, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1189, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1204, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1219, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1235, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1250, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1265, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1280, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1296, dropped: 1, current: 30.00, average: 29.99
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1311, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1326, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1342, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1357, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1373, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1389, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1404, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1419, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1434, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1450, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1465, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1480, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1496, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1512, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1527, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1542, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1558, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1573, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1588, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1603, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1618, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1633, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1649, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1664, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1680, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1695, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1710, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1726, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1742, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1758, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1774, dropped: 1, current: 30.00, average: 30.00
+/GstPipeline:pipeline0/GstFPSDisplaySink:fpssink: last-message = rendered: 1790, dropped: 1, current: 30.01, average: 30.00
+Got EOS from element "pipeline0".
+Execution ended after 0:01:00.845240035
+Setting pipeline to NULL ...
+Freeing pipeline ...
